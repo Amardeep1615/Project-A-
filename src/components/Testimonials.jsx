@@ -19,8 +19,8 @@ const Testimonials = () => {
                 <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah J." className="w-full h-full object-cover" />
               </div>
               <div>
-                <h5 className="font-bold">Sarah J.</h5>
-                <p className="text-gray-600 text-sm">Marketing Director</p>
+                <h5 className="font-bold">Hareesh Madineedi.</h5>
+                <p className="text-gray-600 text-sm">Python and Ds Developer</p>
               </div>
             </div>
             <p className="text-gray-700 italic">"Project A transformed our digital presence. Their innovative approach delivered results beyond our expectations."</p>
@@ -35,8 +35,8 @@ const Testimonials = () => {
                 <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T." className="w-full h-full object-cover" />
               </div>
               <div>
-                <h5 className="font-bold">Michael T.</h5>
-                <p className="text-gray-600 text-sm">CEO, TechStart</p>
+                <h5 className="font-bold">Dinesh kuna.</h5>
+                <p className="text-gray-600 text-sm">High TechSolutions, React Developer</p>
               </div>
             </div>
             <p className="text-gray-700 italic">"The team at Project A understands our vision and delivers solutions that drive real business growth."</p>
@@ -51,8 +51,8 @@ const Testimonials = () => {
                 <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Lisa M." className="w-full h-full object-cover" />
               </div>
               <div>
-                <h5 className="font-bold">Lisa M.</h5>
-                <p className="text-gray-600 text-sm">Product Manager</p>
+                <h5 className="font-bold">Vamsee Krishna Galeti.</h5>
+                <p className="text-gray-600 text-sm">Full Stack Developer</p>
               </div>
             </div>
             <p className="text-gray-700 italic">"Exceptional service and support. They've become an invaluable partner for our digital transformation."</p>
