@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 export default {
+  darkMode: 'class', // Enable dark mode via class
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -11,7 +12,7 @@ export default {
           900: '#4c1d95',
           800: '#5b21b6',
           700: '#6d28d9',
-          100: '#ede9fe', // Added for the icon backgrounds
+          100: '#ede9fe',
         },
         accent: '#f59e0b',
       },
@@ -30,8 +31,8 @@ export default {
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
-        }
-      }
+        },
+      },
     },
   },
   plugins: [],
