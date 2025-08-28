@@ -16,7 +16,7 @@ const Testimonials = () => {
           <div className="bg-gray-50 p-8 rounded-xl border border-gray-200">
             <div className="flex items-center mb-4">
               <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-                <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah J." className="w-full h-full object-cover" />
+            
               </div>
               <div>
                 <h5 className="font-bold">Hareesh Madineedi.</h5>
@@ -32,7 +32,7 @@ const Testimonials = () => {
           <div className="bg-gray-50 p-8 rounded-xl border border-gray-200">
             <div className="flex items-center mb-4">
               <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T." className="w-full h-full object-cover" />
+              
               </div>
               <div>
                 <h5 className="font-bold">Dinesh kuna.</h5>
@@ -48,7 +48,7 @@ const Testimonials = () => {
           <div className="bg-gray-50 p-8 rounded-xl border border-gray-200">
             <div className="flex items-center mb-4">
               <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Lisa M." className="w-full h-full object-cover" />
+              
               </div>
               <div>
                 <h5 className="font-bold">Vamsee Krishna Galeti.</h5>
