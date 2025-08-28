@@ -1,5 +1,6 @@
 // src/components/CTA.jsx
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CallFun = () => {
   return (
@@ -8,17 +9,18 @@ const CallFun = () => {
         <h3 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h3>
         <p className="text-xl text-blue-200 mb-8 max-w-3xl mx-auto">Join hundreds of satisfied clients who trust Project A for innovative solutions.</p>
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-          <a href="/" className="bg-amber-500 hover:bg-opacity-90 text-blue-900 px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:shadow-xl">
+          <Link
+            to="/schedule-demo"
+            className="bg-amber-500 hover:bg-opacity-90 text-blue-900 px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:shadow-xl"
+          >
             Get Started Now
-          </a>
-          <a href="/" className="border-2 border-white hover:bg-white hover:text-blue-900 text-white px-8 py-4 rounded-full font-bold transition-all">
-            Schedule a Demo
-          </a>
+          </Link>
+          <Link to="/schedule-demo" className="hover:underline">Schedule a Demo</Link>
         </div>
       </div>
     </section>
   );
 };
 
-export default CallFun;  
+export default CallFun;
 

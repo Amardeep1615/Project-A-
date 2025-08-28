@@ -23,29 +23,29 @@ export const OurStoryPage = () => {
         <div className="max-w-5xl mx-auto px-4 space-y-16">
           {[
             {
-              year: "2015",
+              year: "2021",
               title: "Foundation",
               desc: "ANA Innovative Works was founded by TMK with a vision to create technology solutions that make a real difference. Starting with just three passionate team members, we began our journey in a small office space, fueled by big dreams and endless coffee.",
             },
             {
-              year: "2017",
+              year: "2022",
               title: "First Major Breakthrough",
               desc: "After countless late nights and innovative thinking, we developed our first patented technology solution that revolutionized how small businesses manage their operations. This marked our triumphant entry into the enterprise solutions market.",
             },
             {
-              year: "2019",
-              title: "Global Expansion",
+              year: "2023",
+              title: "Visionary Ideas",
               desc: "With a growing family of 50+ brilliant innovators, we expanded our operations internationally, opening offices in three new countries and serving diverse clients across multiple industries.",
             },
             {
-              year: "2022",
-              title: "Industry Recognition",
-              desc: "ANA Innovative Works was honored as one of the 'Top 10 Most Innovative Tech Companies' by TechGlobal Magazine, recognizing our relentless commitment to pushing boundaries.",
+              year: "2024",
+              title: "Work Progress",
+              desc: "ANA Innovative Works ,Passion to  deliver a good team work. ",
             },
             {
               year: "Present",
               title: "Leading the Way",
-              desc: "Today, we stand at the forefront of technological innovation, serving Fortune 500 companies and ambitious startups alike with our cutting-edge solutions.",
+              desc: "Today, we stand at the forefront of technological innovation,Starting a cutting edge technologies",
             },
           ].map((item, index) => (
             <div

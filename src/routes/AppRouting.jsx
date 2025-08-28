@@ -9,6 +9,7 @@ import CallFun from "../components/CallFun";
 import AboutPage from "../pages/AboutPage";
 import SubjectsNav from "../components/SubjectsNav";
 import { OurStoryPage } from "../pages/OurStoryPage";
+import ScheduleDemo from "../pages/ScheduleDemo";
 
 
 
@@ -32,6 +33,7 @@ function AppRouting() {
               404 | Page Not Found
             </div>}/>
       <Route path="/ourstorypage" element={<OurStoryPage/>}/>
+      <Route path="/schedule-demo" element={<ScheduleDemo/>} />
       
       </Routes>
       <CallFun/>
