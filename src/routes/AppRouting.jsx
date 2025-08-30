@@ -33,7 +33,7 @@ function AppRouting() {
               404 | Page Not Found
             </div>}/>
       <Route path="/ourstorypage" element={<OurStoryPage/>}/>
-      <Route path="/schedule-demo" element={<ScheduleDemo/>} />
+      <Route path="/ScheduleDemo" element={<ScheduleDemo/>} />
       
       </Routes>
       <CallFun/>
