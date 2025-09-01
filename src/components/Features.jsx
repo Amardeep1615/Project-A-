@@ -11,58 +11,16 @@ import {
   faLightbulb,
   faCodeBranch,
 } from "@fortawesome/free-solid-svg-icons";
-// eslint-disable-next-line no-unused-vars
-import { motion, AnimatePresence } from "framer-motion";
 
 const features = [
-  {
-    icon: faBolt,
-    title: "Fast Performance",
-    description:
-      "Optimized solutions that deliver lightning-fast performance for your business needs.",
-  },
-  {
-    icon: faShieldAlt,
-    title: "Secure Solutions",
-    description:
-      "Enterprise-grade security to protect your data and ensure privacy compliance.",
-  },
-  {
-    icon: faChartLine,
-    title: "Growth Focused",
-    description:
-      "Scalable solutions designed to grow with your business and adapt to changing needs.",
-  },
-  {
-    icon: faMobileAlt,
-    title: "Mobile Ready",
-    description:
-      "Seamlessly designed to work across all devices with responsive UI/UX.",
-  },
-  {
-    icon: faCloud,
-    title: "Cloud Integration",
-    description:
-      "Powerful cloud-native applications for flexibility, scalability, and cost efficiency.",
-  },
-  {
-    icon: faUsers,
-    title: "Team Collaboration",
-    description:
-      "Built-in tools and integrations that improve productivity and collaboration.",
-  },
-  {
-    icon: faLightbulb,
-    title: "Innovative Ideas",
-    description:
-      "Creative approaches that ensure your projects always stand out in the market.",
-  },
-  {
-    icon: faCodeBranch,
-    title: "Agile Development",
-    description:
-      "Iterative development process to adapt quickly to your changing requirements.",
-  },
+  { icon: faBolt, title: "Fast Performance", description: "Optimized solutions that deliver lightning-fast performance for your business needs." },
+  { icon: faShieldAlt, title: "Secure Solutions", description: "Enterprise-grade security to protect your data and ensure privacy compliance." },
+  { icon: faChartLine, title: "Growth Focused", description: "Scalable solutions designed to grow with your business and adapt to changing needs." },
+  { icon: faMobileAlt, title: "Mobile Ready", description: "Seamlessly designed to work across all devices with responsive UI/UX." },
+  { icon: faCloud, title: "Cloud Integration", description: "Powerful cloud-native applications for flexibility, scalability, and cost efficiency." },
+  { icon: faUsers, title: "Team Collaboration", description: "Built-in tools and integrations that improve productivity and collaboration." },
+  { icon: faLightbulb, title: "Innovative Ideas", description: "Creative approaches that ensure your projects always stand out in the market." },
+  { icon: faCodeBranch, title: "Agile Development", description: "Iterative development process to adapt quickly to your changing requirements." },
 ];
 
 const Features = () => {
@@ -93,35 +51,20 @@ const Features = () => {
           </p>
         </div>
 
-        {/* Animate feature cards */}
-        <div className="overflow-hidden">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={index}
-              initial={{ x: "100%", opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: "-100%", opacity: 0 }}
-              transition={{ duration: 0.8 }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-8"
+        {/* Feature cards without animation */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 transition-all duration-500">
+          {visibleFeatures.map((f, i) => (
+            <div
+              key={i}
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition"
             >
-              {visibleFeatures.map((f, i) => (
-                <div
-                  key={i}
-                  className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition"
-                >
-                  {/* Icon + Title in Row */}
-                  <div className="flex items-center gap-3 mb-3">
-                    <FontAwesomeIcon
-                      icon={f.icon}
-                      className="text-lg text-amber-500"
-                    />
-                    <h4 className="text-lg font-bold">{f.title}</h4>
-                  </div>
-                  <p className="text-gray-600 text-sm">{f.description}</p>
-                </div>
-              ))}
-            </motion.div>
-          </AnimatePresence>
+              <div className="flex items-center gap-3 mb-3">
+                <FontAwesomeIcon icon={f.icon} className="text-lg text-amber-500" />
+                <h4 className="text-lg font-bold">{f.title}</h4>
+              </div>
+              <p className="text-gray-600 text-sm">{f.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

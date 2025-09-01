@@ -55,7 +55,10 @@ const Header = () => {
           </button>
         </div>
 
+
         <nav className="hidden md:flex space-x-8 items-center">
+          
+
           <Link to="/" className="hover:text-amber-500 transition-colors duration-300 font-medium relative group">
             Home
             <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-amber-500 transition-all duration-300 group-hover:w-full"></span>
@@ -68,11 +71,11 @@ const Header = () => {
             Services
             <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-amber-500 transition-all duration-300 group-hover:w-full"></span>
           </Link>
-          <Link to="/contact" className="hover:text-amber-500 transition-colors duration-300 font-medium relative group">
+          <Link to="/Contact" className="hover:text-amber-500 transition-colors duration-300 font-medium relative group">
             Contact
             <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-amber-500 transition-all duration-300 group-hover:w-full"></span>
           </Link>
-          <Link to="/get-started" className="ml-4 bg-amber-500 text-blue-900 px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl">
+          <Link to="/GetStarted" className="ml-4 bg-amber-500 text-blue-900 px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl">
             Get Started
           </Link>
           <Link to="/Signin" className="hover:text-amber-500 transition-colors duration-300 font-medium relative group">
@@ -98,7 +101,7 @@ const Header = () => {
           <Link to="/about" className="text-white hover:text-amber-500 transition" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
           <Link to="/services" className="text-white hover:text-amber-500 transition" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
           <Link to="/contact" className="text-white hover:text-amber-500 transition" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
-          <Link to="/get-started" className="bg-amber-500 text-blue-900 px-4 py-2 rounded-full text-center font-semibold mt-2" onClick={() => setIsMobileMenuOpen(false)}>
+          <Link to="/GetStarted" className="bg-amber-500 text-blue-900 px-4 py-2 rounded-full text-center font-semibold mt-2" onClick={() => setIsMobileMenuOpen(false)}>
             Get Started
           </Link>
         </div>

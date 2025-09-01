@@ -2,8 +2,6 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
-// eslint-disable-next-line no-unused-vars
-import { motion, AnimatePresence } from "framer-motion";
 
 const testimonials = [
   {
@@ -118,13 +116,12 @@ const testimonials = [
       "The testing automation solutions drastically reduced our release time. Excellent service!",
     rating: 5,
   },
-
 ];
 
 const Testimonials = () => {
   const [index, setIndex] = useState(0);
 
-  // Auto-slide every 5s
+  // Auto-update every 5 seconds without sliding animation
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 3) % testimonials.length);
@@ -132,7 +129,7 @@ const Testimonials = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Ensure exactly 3 visible cards (handles array wrap-around)
+  // Exactly 3 visible cards
   const visibleCards = [
     testimonials[index],
     testimonials[(index + 1) % testimonials.length],
@@ -151,42 +148,31 @@ const Testimonials = () => {
           </p>
         </div>
 
-        {/* Animate testimonial cards */}
-        <div className="overflow-hidden">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={index}
-              initial={{ x: "100%", opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: "-100%", opacity: 0 }}
-              transition={{ duration: 0.8 }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-8"
+        {/* Testimonial cards without animation */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 transition-all duration-500">
+          {visibleCards.map((t, i) => (
+            <div
+              key={i}
+              className="bg-gray-50 p-8 rounded-xl border border-gray-200 shadow-md"
             >
-              {visibleCards.map((t, i) => (
-                <div
-                  key={i}
-                  className="bg-gray-50 p-8 rounded-xl border border-gray-200 shadow-md"
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 rounded-full bg-blue-200 flex items-center justify-center font-bold text-blue-900 mr-4">
-                      {t.name.charAt(0)}
-                    </div>
-                    <div>
-                      <h5 className="font-bold">{t.name}</h5>
-                      <p className="text-gray-600 text-sm">{t.role}</p>
-                    </div>
-                  </div>
-                  <p className="text-gray-700 italic">"{t.review}"</p>
-                  <div className="mt-4 text-yellow-400">
-                    {Array.from({ length: Math.floor(t.rating) }).map((_, i) => (
-                      <FontAwesomeIcon key={i} icon={faStar} />
-                    ))}
-                    {t.rating % 1 !== 0 && <FontAwesomeIcon icon={faStarHalfAlt} />}
-                  </div>
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 rounded-full bg-blue-200 flex items-center justify-center font-bold text-blue-900 mr-4">
+                  {t.name.charAt(0)}
                 </div>
-              ))}
-            </motion.div>
-          </AnimatePresence>
+                <div>
+                  <h5 className="font-bold">{t.name}</h5>
+                  <p className="text-gray-600 text-sm">{t.role}</p>
+                </div>
+              </div>
+              <p className="text-gray-700 italic">"{t.review}"</p>
+              <div className="mt-4 text-yellow-400">
+                {Array.from({ length: Math.floor(t.rating) }).map((_, i) => (
+                  <FontAwesomeIcon key={i} icon={faStar} />
+                ))}
+                {t.rating % 1 !== 0 && <FontAwesomeIcon icon={faStarHalfAlt} />}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

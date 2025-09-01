@@ -20,13 +20,13 @@ const Hero = () => {
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
             <Link
-              to="get-started"
-              className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-3 rounded-full font-medium transition-all shadow-lg hover:shadow-xl"
+              to="FigmaPage"
+              className="bg-blue-700 hover:bg-amber-800 text-white px-8 py-3 rounded-full font-medium transition-all shadow-lg hover:shadow-xl"
             >
               Figma
             </Link>
             <Link
-              to="learnmore"
+              to="LearnMore"
               className="border-2 border-blue-700 text-blue-700 hover:bg-blue-50 px-8 py-3 rounded-full font-medium transition-all"
             >
               Learn More

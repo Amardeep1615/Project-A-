@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 const subjectCategories = {
   Engineering: ["CSE", "ECE", "EEE", "Mechanical", "Civil", "IT", "AI/ML", "IoT", "Aerospace", "Automotive"],
@@ -25,34 +25,30 @@ const subjectCategories = {
   Cloud: ["AWS", "Azure", "Google Cloud", "Heroku", "DigitalOcean", "Cloudflare"],
   DevOps: ["Linux", "Docker", "Kubernetes", "CI/CD", "Ansible", "Terraform", "Jenkins", "Prometheus"],
   Database: ["MySQL", "PostgreSQL", "MongoDB", "Oracle", "SQLite", "MariaDB", "Redis", "Cassandra", "Firebase"],
-  Networking: ["OSI Model", "TCP/IP", "Routing", "Switching", "DNS", "VPN", "Firewalls"],
-  "System Design": ["Scalability", "Load Balancing", "Caching", "Microservices", "Event-driven Architecture"],
-  "Soft Skills": ["Leadership", "Teamwork", "Time Management", "Problem Solving", "Critical Thinking", "Adaptability"],
-  Exams: ["GATE", "NET", "CAT", "GRE", "TOEFL", "IELTS", "SAT", "UPSC", "SSC", "Banking"],
-  "Teacher Training": ["B.Ed", "M.Ed", "Educational Psychology", "Pedagogy", "Curriculum Development"],
-  "Professional Certifications": ["AWS", "Azure", "Google Cloud", "Cisco", "Oracle", "Red Hat", "Microsoft"],
-  "Career Prep": ["Resume Building", "LinkedIn", "Freelancing", "Entrepreneurship", "Startups"],
-  "Fine Arts": ["Music", "Dance", "Painting", "Drama", "Photography", "Film Making"],
-  Sports: ["Cricket", "Football", "Tennis", "Basketball", "Athletics", "Yoga", "Martial Arts"],
 };
-
 
 const StudyNavbar = () => {
   const [activeCategory, setActiveCategory] = useState(null);
   const [dropdownPos, setDropdownPos] = useState({ top: 0, left: 0 });
   const buttonRefs = useRef({});
+  const dropdownRef = useRef(null);
   const scrollRef = useRef(null);
 
+  // Toggle category dropdown
   const toggleCategory = (category) => {
     if (activeCategory === category) {
       setActiveCategory(null);
     } else {
       const rect = buttonRefs.current[category].getBoundingClientRect();
-      setDropdownPos({ top: rect.bottom + window.scrollY, left: rect.left });
+      setDropdownPos({
+        top: rect.bottom + window.scrollY,
+        left: rect.left + rect.width / 2, // ✅ center of button
+      });
       setActiveCategory(category);
     }
   };
 
+  // Scroll controls
   const scrollLeft = () => {
     scrollRef.current.scrollBy({ left: -200, behavior: "smooth" });
   };
@@ -61,8 +57,23 @@ const StudyNavbar = () => {
     scrollRef.current.scrollBy({ left: 200, behavior: "smooth" });
   };
 
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target) &&
+        !Object.values(buttonRefs.current).some((btn) => btn.contains(event.target))
+      ) {
+        setActiveCategory(null);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
-    <div className="relative w-full bg-gray-200 p-3 shadow-md">
+    <div className="relative w-full p-3">
       {/* Scrollable Navbar with Arrows */}
       <div className="flex items-center gap-2">
         {/* Left Arrow */}
@@ -73,7 +84,7 @@ const StudyNavbar = () => {
           &lt;
         </button>
 
-        {/* Categories - disable manual scroll */}
+        {/* Categories */}
         <div
           ref={scrollRef}
           className="flex gap-4 overflow-hidden w-full"
@@ -100,11 +111,15 @@ const StudyNavbar = () => {
         </button>
       </div>
 
-      {/* Floating Dropdown using fixed position */}
+      {/* Floating Dropdown */}
       {activeCategory && (
         <div
-          className="fixed bg-white border rounded-lg shadow-lg z-[9999] w-48"
-          style={{ top: dropdownPos.top + "px", left: dropdownPos.left + "px" }}
+          ref={dropdownRef}
+          className="fixed mt-2 bg-white border border-gray-200 rounded-xl px-3 shadow-lg z-[9999] w-48 transform -translate-x-1/2"
+          style={{
+            top: dropdownPos.top + "px",
+            left: dropdownPos.left + "px",
+          }}
         >
           {subjectCategories[activeCategory].map((subject) => (
             <div
@@ -116,16 +131,6 @@ const StudyNavbar = () => {
           ))}
         </div>
       )}
-
-      {/* Random Content Below */}
-      <div className="mt-20 p-6 bg-blue-100 rounded-lg shadow-md">
-        <h2 className="text-lg font-bold">Main Content</h2>
-        <p>
-          ✅ Dropdown floats above.  
-          ✅ Categories move only when you click the arrows 
-          ❌ No manual scroll.
-        </p>
-      </div>
     </div>
   );
 };
