@@ -1,42 +1,71 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* Extra small devices / phones (max-width: 424px) */
+@media (max-width: 424px) {
+  .app-container {
+    padding: 8px;
+    font-size: 12px;
+    background-color: #f8f8f8;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* Small devices / large phones (425px - 767px) */
+@media (min-width: 425px) and (max-width: 767px) {
+  .app-container {
+    padding: 12px;
+    font-size: 14px;
+    background-color: #f0f0f0;
   }
 }
 
-.card {
-  padding: 2em;
+/* Specific for 768px exactly */
+@media (min-width: 768px) and (max-width: 768px) {
+  .app-container {
+    padding: 14px;
+    font-size: 15px;
+    background-color: #eaeaea;
+  }
 }
 
-.read-the-docs {
-  color: #888;
+/* Medium devices / tablets (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .app-container {
+    padding: 16px;
+    font-size: 16px;
+    background-color: #e8e8e8;
+  }
+}
+
+/* Large devices / laptops (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .app-container {
+    padding: 20px;
+    font-size: 18px;
+    background-color: #e0e0e0;
+  }
+}
+
+/* Extra large devices / desktops (1441px - 1920px) */
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .app-container {
+    padding: 24px;
+    font-size: 20px;
+    background-color: #d8d8d8;
+  }
+}
+
+/* Ultra large devices / 4K screens (1921px - 2560px) */
+@media (min-width: 1921px) and (max-width: 2560px) {
+  .app-container {
+    padding: 28px;
+    font-size: 22px;
+    background-color: #d0d0d0;
+  }
+}
+
+/* Beyond 4K screens (min-width: 2561px) */
+@media (min-width: 2561px) {
+  .app-container {
+    padding: 32px;
+    font-size: 24px;
+    background-color: #c8c8c8;
+  }
 }

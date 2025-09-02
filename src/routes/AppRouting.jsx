@@ -17,6 +17,11 @@ import Careers from "../pages/CareersPage";
 import Blog from "../pages/BlogPage";
 import Press from "../pages/PressPage";
 import ResumeMaker from "../pages/ResumePage";
+import Documentation from "../pages/DocsPage";
+import GuidePage from "../pages/GuidesPage";
+import ApiStatus from "../pages/APIStatusPage";
+import Help from "../pages/Help";
+import GetInTouch from "../pages/GetinTouch";
 
 
 
@@ -49,6 +54,12 @@ function AppRouting() {
       <Route path="/career" element={<Careers/>}/>
       <Route path="/blog" element={<Blog/>}/>
       <Route path="/press" element={<Press/>}/>
+      <Route path="/docs" element={<Documentation/>}/>
+      <Route path="/guides" element={<GuidePage/>}/>
+      <Route path="/status" element={<ApiStatus/>}/>
+      <Route path="/help" element={<Help/>}/>
+      <Route path="/getintouch" element={<GetInTouch/>}/>
+
 
 
       

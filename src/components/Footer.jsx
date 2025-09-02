@@ -136,7 +136,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/support"
+                  to="/help"
                   className="text-gray-400 hover:text-white transition"
                 >
                   Help Center
