@@ -58,7 +58,7 @@ function AppRouting() {
       <Route path="/guides" element={<GuidePage/>}/>
       <Route path="/status" element={<ApiStatus/>}/>
       <Route path="/help" element={<Help/>}/>
-      <Route path="/getintouch" element={<GetInTouch/>}/>
+      <Route path="/getintouchp" element={<GetInTouch/>}/>
 
 
 
