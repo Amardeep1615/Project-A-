@@ -18,14 +18,12 @@ const GetInTouch = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto my-10 p-6 bg-white rounded-xl shadow-lg">
-      <h2 className="text-2xl font-bold text-indigo-600 mb-2 text-center">
-        Get in Touch
-      </h2>
-      <p className="text-gray-600 mb-6 text-center">
+    <div style={{ maxWidth: "500px", margin: "20px auto", padding: "20px", border: "1px solid #ddd", borderRadius: "8px" }}>
+      <h2 style={{ textAlign: "center", color: "#4f46e5" }}>Get in Touch</h2>
+      <p style={{ textAlign: "center", color: "#555" }}>
         We would love to hear from you. Please fill out the form below.
       </p>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+      <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
         <input
           type="text"
           name="name"
@@ -33,7 +31,7 @@ const GetInTouch = () => {
           value={formData.name}
           onChange={handleChange}
           required
-          className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          style={{ padding: "10px", borderRadius: "6px", border: "1px solid #ccc" }}
         />
         <input
           type="email"
@@ -42,7 +40,7 @@ const GetInTouch = () => {
           value={formData.email}
           onChange={handleChange}
           required
-          className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          style={{ padding: "10px", borderRadius: "6px", border: "1px solid #ccc" }}
         />
         <textarea
           name="message"
@@ -50,11 +48,18 @@ const GetInTouch = () => {
           value={formData.message}
           onChange={handleChange}
           required
-          className="p-3 border border-gray-300 rounded-lg h-32 resize-none focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          style={{ padding: "10px", borderRadius: "6px", border: "1px solid #ccc", minHeight: "100px" }}
         />
         <button
           type="submit"
-          className="bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700 transition-colors"
+          style={{
+            backgroundColor: "#4f46e5",
+            color: "white",
+            padding: "12px",
+            borderRadius: "6px",
+            border: "none",
+            cursor: "pointer",
+          }}
         >
           Send Message
         </button>
