@@ -73,7 +73,7 @@ const Hero = () => {
               </div>
               {/* Main Image */}
               <img
-                src="Src/Assets/com.jpg"
+                src="/com.jpg"
                 alt="Innovation"
                 className="w-full h-auto rounded-b-lg"
               />

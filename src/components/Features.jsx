@@ -55,7 +55,7 @@ const Features = () => {
         <div className="flex flex-col md:flex-row items-center justify-center w-full gap-8 md:gap-16">
           {/* Scientist Image */}
           <img
-            src="src/assets/olderadultscientist.jpg"
+            src="/olderadultscientist.jpg"
             alt="A scientist looking through a microscope"
             className="w-64 h-64 md:w-72 md:h-72 object-cover rounded-full border-4 border-white shadow-2xl transform transition duration-500 hover:scale-105"
           />
@@ -95,7 +95,7 @@ const Features = () => {
       <div className="bg-gradient-to-r bg-amber-500 px-6 py-12 flex flex-col md:flex-row items-center">
 
         <img
-          src="src/assets/cod33.jpg"
+          src="/cod33.jpg"
           alt="AI & Coding"
           className="w-full md:w-1/2 h-80 object-cover rounded-xl shadow-2xl mb-6 md:mb-0"
         />
@@ -133,7 +133,7 @@ const Features = () => {
           </ul>
         </div>
         <img
-          src="src/assets/phy.jpg"
+          src="/phy.jpg"
           alt="Learn from Scientists"
           className="w-full md:w-1/2 h-80 object-cover rounded-xl shadow-2xl mt-6 md:mt-0"
         />
@@ -161,7 +161,7 @@ const Features = () => {
           {/* Grammar */}
           <div className="bg-white p-6 rounded-2xl shadow-2xl text-center transform transition duration-500 hover:scale-105 hover:shadow-orange-400/50">
             <img
-              src="src/assets/eng.jpg"
+              src="/eng.jpg"
               alt="Grammar"
               className="w-full h-40 object-cover rounded-md mb-4"
             />
@@ -172,7 +172,7 @@ const Features = () => {
           {/* Vocabulary */}
           <div className="bg-white p-6 rounded-2xl shadow-2xl text-center transform transition duration-500 hover:scale-105 hover:shadow-orange-400/50">
             <img
-              src="src/assets/eng1.jpg"
+              src="/eng1.jpg"
               alt="Vocabulary"
               className="w-full h-40 object-cover rounded-md mb-4"
             />
@@ -183,7 +183,7 @@ const Features = () => {
           {/* Communication */}
           <div className="bg-white p-6 rounded-2xl shadow-2xl text-center transform transition duration-500 hover:scale-105 hover:shadow-orange-400/50">
             <img
-              src="src/assets/eng2.jpg"
+              src="/eng2.jpg"
               alt="Communication"
               className="w-full h-40 object-cover rounded-md mb-4"
             />
@@ -214,7 +214,7 @@ const Features = () => {
         </div>
         <div className="md:w-1/2 mt-6 md:mt-0">
           <img
-            src="src/assets/cod4.jpg"
+            src="/cod4.jpg"
             alt="Career Prep"
             className="w-full h-80 object-cover rounded-xl shadow-2xl"
           />
@@ -239,25 +239,25 @@ const Features = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Physics */}
           <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <img src="src/assets/phy1.jpg" alt="Physics" className="w-full h-40 object-cover rounded-md mb-2" />
+            <img src="/phy1.jpg" alt="Physics" className="w-full h-40 object-cover rounded-md mb-2" />
             <h3 className="text-2xl font-bold mb-1">Physics</h3>
             <p>Mechanics, optics, thermodynamics, modern physics.</p>
           </div>
           {/* Chemistry */}
           <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <img src="src/assets/chem1.jpg" alt="Chemistry" className="w-full h-40 object-cover rounded-md mb-2" />
+            <img src="/chem1.jpg" alt="Chemistry" className="w-full h-40 object-cover rounded-md mb-2" />
             <h3 className="text-2xl font-bold mb-1">Chemistry</h3>
             <p>Organic, inorganic, and physical chemistry concepts.</p>
           </div>
           {/* Math */}
           <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <img src="src/assets/math.jpg" alt="Math" className="w-full h-40 object-cover rounded-md mb-2" />
+            <img src="/math.jpg" alt="Math" className="w-full h-40 object-cover rounded-md mb-2" />
             <h3 className="text-2xl font-bold mb-1">Mathematics</h3>
             <p>Algebra, geometry, calculus, statistics, applied math.</p>
           </div>
           {/* Biology */}
           <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <img src="src/assets/bio.jpg" alt="Biology" className="w-full h-40 object-cover rounded-md mb-2" />
+            <img src="/bio.jpg" alt="Biology" className="w-full h-40 object-cover rounded-md mb-2" />
             <h3 className="text-2xl font-bold mb-1">Biology</h3>
             <p>Anatomy, genetics, ecology, and microbiology.</p>
           </div>
@@ -285,7 +285,7 @@ const Features = () => {
           {/* Level 1 */}
           <div className="bg-white p-6 rounded-2xl shadow-2xl flex-1 text-center transform transition duration-500 hover:scale-105 hover:shadow-indigo-400/50">
             <img
-              src="src/assets/cod.jpg"
+              src="/cod.jpg"
               alt="Beginner Level"
               className="w-full h-40 object-cover rounded-md mb-4"
             />
@@ -296,7 +296,7 @@ const Features = () => {
           {/* Level 2 */}
           <div className="bg-white p-6 rounded-2xl shadow-2xl flex-1 text-center transform transition duration-500 hover:scale-105 hover:shadow-indigo-400/50">
             <img
-              src="src/assets/cod1.jpg"
+              src="/cod1.jpg"
               alt="Intermediate Level"
               className="w-full h-40 object-cover rounded-md mb-4"
             />
@@ -307,7 +307,7 @@ const Features = () => {
           {/* Level 3 */}
           <div className="bg-white p-6 rounded-2xl shadow-2xl flex-1 text-center transform transition duration-500 hover:scale-105 hover:shadow-indigo-400/50">
             <img
-              src="src/assets/cod2.jpg"
+              src="/cod2.jpg"
               alt="Advanced Level"
               className="w-full h-40 object-cover rounded-md mb-4"
             />
