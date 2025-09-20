@@ -9,7 +9,7 @@ const Hero = () => {
       {/* Background Images */}
       
       <img
-        src="Src/Assets/cod2.jpg"
+        src="cod2.jpg"
         alt="Background Computer"
         className="absolute inset-0 w-full h-full object-cover opacity-20 z-0"
       />
@@ -46,17 +46,18 @@ const Hero = () => {
             >
               Figma
             </Link>
-            <Link
-              to="LearnMore"
-              className="border-2 border-blue-700 text-blue-700 hover:bg-blue-50 px-8 py-3 rounded-full font-medium transition-all"
-            >
-              Learn More
-            </Link>
+           
             <Link
               to="ourstorypage"
               className="bg-amber-500 hover:bg-blue-700 text-blue-900 hover:text-black px-6 py-4 rounded-full font-bold shadow-lg hover:shadow-xl transition-all"
             >
               Our Story
+            </Link>
+             <Link
+              to="LearnMore"
+              className=" bg-green-500 text-blue-700 hover:bg-blue-50 px-6 py-4 rounded-full font-medium shadow-lg hover:shadow-xl transition-all"
+            >
+              Learn More
             </Link>
           </div>
         </div>
