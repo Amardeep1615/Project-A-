@@ -22,12 +22,7 @@ const AboutPage = () => {
               We deliver modern digital solutions to empower businesses —
               from software development to AI-driven automation.
             </p>
-            <a
-              href="/getintouchp"
-              className="inline-block bg-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-700 transition"
-            >
-              Get in Touch
-            </a>
+           
           </div>
           <div>
             <img

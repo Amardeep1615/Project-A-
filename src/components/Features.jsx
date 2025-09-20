@@ -40,16 +40,297 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h3 className="text-3xl md:text-4xl font-bold mb-4">
-            Why Choose <span className="text-amber-500">Project A</span>
+    <section className=" bg-gray-50">
+      <h1 className="text-3xl md:text-4xl font-bold mb-4 mt-2 text-center">Motivate to bring you <span className="text-amber-500"> more interesting ideas.</span></h1>
+
+      <p className="text-gray-600 max-w-2xl mx-auto text-center">
+        1.Explore a world of knowledge with engaging courses, practical projects, and expert guidance.
+      </p>
+      <p className="text-gray-600 max-w-2xl mx-auto mb-2 ">
+        2.Unlock your potential and turn your ideas into real achievements.
+      </p>
+
+
+      <div className="bg-gradient-to-r from-purple-700 via-purple-800 to-indigo-900 flex flex-col items-center justify-center px-6 py-12 rounded-xl shadow-xl text-white">
+        <div className="flex flex-col md:flex-row items-center justify-center w-full gap-8 md:gap-16">
+          {/* Scientist Image */}
+          <img
+            src="src/assets/olderadultscientist.jpg"
+            alt="A scientist looking through a microscope"
+            className="w-64 h-64 md:w-72 md:h-72 object-cover rounded-full border-4 border-white shadow-2xl transform transition duration-500 hover:scale-105"
+          />
+
+          {/* Features List */}
+          <ul className="text-xl md:text-2xl text-white font-serif space-y-4 md:ml-4">
+            <li>✔ Knowledge (science, arts, culture)</li>
+            <li>✔ Skills (critical thinking, communication, technical)</li>
+            <li>✔ Values & Ethics (respect, integrity, empathy)</li>
+            <li>✔ Creativity & Innovation (adaptation in the modern world)</li>
+          </ul>
+        </div>
+
+        {/* Highlighted Text */}
+        <h1 className="mt-10 text-3xl md:text-4xl font-bold text-amber-500 font-cursive text-center">
+          <span className="mr-2">★</span>Focus on your target<span className="ml-2">★</span>
+        </h1>
+      </div>
+
+
+
+      {/* 2nd code */}
+      <h1 className="text-3xl md:text-4xl font-bold mb-4 mt-2 text-center">
+        Travel through AI <span className="text-amber-500">Technology and become a Master Coder.</span>
+      </h1>
+
+      <p className="text-gray-600 max-w-2xl mx-auto  ">
+        1. Explore a world of knowledge with engaging courses, hands-on projects.
+      </p>
+      <p className="text-gray-600 max-w-2xl mx-auto ">
+        2. Unlock your potential by learning advanced coding techniques, solving real-world problems.
+      </p>
+      <p className="text-gray-600 max-w-2xl mx-auto mb-2">
+        3. Gain confidence in AI, machine learning, and full-stack development.
+      </p>
+
+      <div className="bg-gradient-to-r bg-amber-500 px-6 py-12 flex flex-col md:flex-row items-center">
+
+        <img
+          src="src/assets/cod33.jpg"
+          alt="AI & Coding"
+          className="w-full md:w-1/2 h-80 object-cover rounded-xl shadow-2xl mb-6 md:mb-0"
+        />
+        <div className="md:ml-10 text-white md:w-1/2 space-y-4">
+          <h2 className="text-4xl font-bold">Master Coding & AI</h2>
+          <p>Learn AI & Machine Learning fundamentals while coding in Python, JavaScript, and more.</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Build projects solving real-world problems.</li>
+            <li>Evaluate algorithms and optimize solutions.</li>
+            <li>Hands-on coding exercises for practice.</li>
+          </ul>
+        </div>
+      </div>
+      <h1 className="text-3xl md:text-4xl font-bold mb-4 mt-2 text-center">
+        Learn from <span className="text-amber-500">Experts</span> and Enhance Your Skills
+      </h1>
+      <p className="text-gray-600 max-w-2xl mx-auto ">
+        1. Explore a world of knowledge with engaging courses, practical projects, expert guidance.
+      </p>
+      <p className="text-gray-600 max-w-2xl mx-auto ">
+        2. Unlock your potential and turn your ideas into real achievements.
+      </p>
+      <p className="text-gray-600 max-w-2xl mx-auto mb-2">
+        3. Learn at your own pace and gain practical experience to thrive in the modern world.
+      </p>
+
+      <div className="bg-green-600 px-6 py-12 flex flex-col md:flex-row items-center">
+        <div className="md:mr-10 md:w-1/2 text-white space-y-4">
+          <h2 className="text-4xl font-bold">Learn from Experts</h2>
+          <p>Get guidance from scientists, mathematicians, and coders with practical knowledge evaluation.</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Hands-on coding exercises to solidify learning.</li>
+            <li>Quizzes & assessments to track progress.</li>
+            <li>Connect theory with practical applications.</li>
+          </ul>
+        </div>
+        <img
+          src="src/assets/phy.jpg"
+          alt="Learn from Scientists"
+          className="w-full md:w-1/2 h-80 object-cover rounded-xl shadow-2xl mt-6 md:mt-0"
+        />
+      </div>
+
+
+
+
+      <h1 className="text-3xl md:text-4xl font-bold text-center mb-4">
+        Master English & <span className="text-amber-500">Communication Skills</span>
+      </h1>
+      <p className="text-gray-600 max-w-2xl mx-auto text-center">
+        1.Improve your grammar,vocabulary, and enhance your writing and speaking abilities.
+      </p>
+      <p className="text-gray-600 max-w-2xl mx-auto text-center mb-2">
+        2.Professional communication skills to succeed in interview and real-world interactions.
+      </p>
+
+      <div className="bg-orange-500 px-6 py-12">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-12">
+          English & Communication
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Grammar */}
+          <div className="bg-white p-6 rounded-2xl shadow-2xl text-center transform transition duration-500 hover:scale-105 hover:shadow-orange-400/50">
+            <img
+              src="src/assets/eng.jpg"
+              alt="Grammar"
+              className="w-full h-40 object-cover rounded-md mb-4"
+            />
+            <h3 className="text-2xl md:text-3xl font-semibold mb-2 text-orange-500">Grammar</h3>
+            <p className="text-gray-600">Improve writing, speaking, and grammar fundamentals.</p>
+          </div>
+
+          {/* Vocabulary */}
+          <div className="bg-white p-6 rounded-2xl shadow-2xl text-center transform transition duration-500 hover:scale-105 hover:shadow-orange-400/50">
+            <img
+              src="src/assets/eng1.jpg"
+              alt="Vocabulary"
+              className="w-full h-40 object-cover rounded-md mb-4"
+            />
+            <h3 className="text-2xl md:text-3xl font-semibold mb-2 text-orange-500">Vocabulary</h3>
+            <p className="text-gray-600">Expand your word knowledge and reading comprehension.</p>
+          </div>
+
+          {/* Communication */}
+          <div className="bg-white p-6 rounded-2xl shadow-2xl text-center transform transition duration-500 hover:scale-105 hover:shadow-orange-400/50">
+            <img
+              src="src/assets/eng2.jpg"
+              alt="Communication"
+              className="w-full h-40 object-cover rounded-md mb-4"
+            />
+            <h3 className="text-2xl md:text-3xl font-semibold mb-2 text-orange-500">Communication</h3>
+            <p className="text-gray-600">Practice professional speaking and presentation skills.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 className="text-4xl font-bold mb-6 text-center">Job Market <span className="text-amber-500"> Insights </span></h2>
+      <p className="max-w-2xl mx-auto ">
+        1.Understand industry trends, employability skills, and the roles most in demand today.
+      </p>
+      <p className="max-w-2xl mx-auto mb-2">
+        2.Get guidance on internships, entry-level jobs, and career growth in technology and business sectors.
+      </p>
+
+
+      <div className="bg-blue-800 px-6 py-12 flex flex-col md:flex-row items-center">
+        <div className="md:w-1/2 text-white space-y-4">
+          <h2 className="text-4xl font-bold">Prepare for the Job Market</h2>
+          <p>Learn career-oriented skills, build resumes, and prepare for interviews.</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Explore tech & science career opportunities.</li>
+            <li>Soft skills for workplace success.</li>
+            <li>Mentorship & placement guidance.</li>
+          </ul>
+        </div>
+        <div className="md:w-1/2 mt-6 md:mt-0">
+          <img
+            src="src/assets/cod4.jpg"
+            alt="Career Prep"
+            className="w-full h-80 object-cover rounded-xl shadow-2xl"
+          />
+        </div>
+      </div>
+
+
+
+      <h1 className="text-3xl md:text-4xl font-bold text-center mb-4">
+        Explore the World of <span className="text-amber-500"> General Sciences </span>
+      </h1>
+      <p className="text-gray-600 max-w-2xl mx-auto ">
+        1.Dive into Physics, Chemistry, Mathematics, and Biology to build a strong foundation in science.
+      </p>
+      <p className="text-gray-600 max-w-2xl mx-auto mb-2">
+        2.Understand key concepts, theories, and practical applications that shape the modern scientific world.
+      </p>
+
+
+      <div className="bg-purple-700 px-6 py-12">
+        <h2 className="text-4xl font-bold text-center text-white mb-8">General Sciences</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Physics */}
+          <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+            <img src="src/assets/phy1.jpg" alt="Physics" className="w-full h-40 object-cover rounded-md mb-2" />
+            <h3 className="text-2xl font-bold mb-1">Physics</h3>
+            <p>Mechanics, optics, thermodynamics, modern physics.</p>
+          </div>
+          {/* Chemistry */}
+          <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+            <img src="src/assets/chem1.jpg" alt="Chemistry" className="w-full h-40 object-cover rounded-md mb-2" />
+            <h3 className="text-2xl font-bold mb-1">Chemistry</h3>
+            <p>Organic, inorganic, and physical chemistry concepts.</p>
+          </div>
+          {/* Math */}
+          <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+            <img src="src/assets/math.jpg" alt="Math" className="w-full h-40 object-cover rounded-md mb-2" />
+            <h3 className="text-2xl font-bold mb-1">Mathematics</h3>
+            <p>Algebra, geometry, calculus, statistics, applied math.</p>
+          </div>
+          {/* Biology */}
+          <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+            <img src="src/assets/bio.jpg" alt="Biology" className="w-full h-40 object-cover rounded-md mb-2" />
+            <h3 className="text-2xl font-bold mb-1">Biology</h3>
+            <p>Anatomy, genetics, ecology, and microbiology.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <h1 className="text-3xl md:text-4xl font-bold text-center mb-4">
+        Enhance Your Social Skills & <span className="text-amber-500"> Coding Levels</span>
+      </h1>
+      <p className="text-gray-600 max-w-2xl mx-auto ">
+        1.Start from the basics and gradually advance through coding principles, teamwork, and problem-solving skills.
+      </p>
+      <p className="text-gray-600 max-w-2xl mx-auto mb-2">
+        2.Take on real projects, integrate AI/ML, and develop leadership in coding teams while improving collaboration and communication.
+      </p>
+
+
+      <div className="bg-indigo-600 px-6 py-12">
+        <h2 className="text-3xl md:text-5xl font-extrabold text-center text-white mb-12">
+          Social Skills & Coding Levels
+        </h2>
+
+        <div className="flex flex-col md:flex-row justify-center items-stretch gap-8">
+          {/* Level 1 */}
+          <div className="bg-white p-6 rounded-2xl shadow-2xl flex-1 text-center transform transition duration-500 hover:scale-105 hover:shadow-indigo-400/50">
+            <img
+              src="src/assets/cod.jpg"
+              alt="Beginner Level"
+              className="w-full h-40 object-cover rounded-md mb-4"
+            />
+            <h3 className="text-2xl md:text-3xl font-bold mb-2 text-indigo-600">Beginner</h3>
+            <p className="text-gray-600">Basic coding principles, introductory projects, teamwork skills.</p>
+          </div>
+
+          {/* Level 2 */}
+          <div className="bg-white p-6 rounded-2xl shadow-2xl flex-1 text-center transform transition duration-500 hover:scale-105 hover:shadow-indigo-400/50">
+            <img
+              src="src/assets/cod1.jpg"
+              alt="Intermediate Level"
+              className="w-full h-40 object-cover rounded-md mb-4"
+            />
+            <h3 className="text-2xl md:text-3xl font-bold mb-2 text-indigo-600">Intermediate</h3>
+            <p className="text-gray-600">Data structures, algorithms, collaborative coding, problem-solving.</p>
+          </div>
+
+          {/* Level 3 */}
+          <div className="bg-white p-6 rounded-2xl shadow-2xl flex-1 text-center transform transition duration-500 hover:scale-105 hover:shadow-indigo-400/50">
+            <img
+              src="src/assets/cod2.jpg"
+              alt="Advanced Level"
+              className="w-full h-40 object-cover rounded-md mb-4"
+            />
+            <h3 className="text-2xl md:text-3xl font-bold mb-2 text-indigo-600">Advanced</h3>
+            <p className="text-gray-600">Full-stack projects, AI/ML integration, leadership in coding teams.</p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div className="max-w-7xl mx-auto px-6 py-12 bg-amber-500 rounded-xl shadow-lg">
+        <div className="text-center mb-12">
+          <h3 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            Why Choose <span className="text-black">Project A</span>
           </h3>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-100 max-w-2xl mx-auto text-lg">
             We combine innovative technology with creative solutions to deliver exceptional results.
           </p>
         </div>
+
 
         {/* Feature cards without animation */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 transition-all duration-500">
@@ -60,10 +341,13 @@ const Features = () => {
             >
               <div className="flex items-center gap-3 mb-3">
                 <FontAwesomeIcon icon={f.icon} className="text-lg text-amber-500" />
+
                 <h4 className="text-lg font-bold">{f.title}</h4>
               </div>
               <p className="text-gray-600 text-sm">{f.description}</p>
+
             </div>
+
           ))}
         </div>
       </div>

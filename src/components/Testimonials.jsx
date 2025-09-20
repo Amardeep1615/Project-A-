@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
+ 
 
 const testimonials = [
   {
@@ -118,28 +119,36 @@ const testimonials = [
   },
 ];
 
+const categories = ["All"]; // Add more categories if needed
+
 const Testimonials = () => {
   const [index, setIndex] = useState(0);
+  const [activeCategory, setActiveCategory] = useState("All");
 
-  // Auto-update every 5 seconds without sliding animation
+  // Filter testimonials based on category
+  const filteredTestimonials =
+    activeCategory === "All"
+      ? testimonials
+      : testimonials.filter((t) => t.category === activeCategory);
+
+  // Auto-update every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prev) => (prev + 3) % testimonials.length);
+      setIndex((prev) => (prev + 3) % filteredTestimonials.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [filteredTestimonials.length]);
 
-  // Exactly 3 visible cards
   const visibleCards = [
-    testimonials[index],
-    testimonials[(index + 1) % testimonials.length],
-    testimonials[(index + 2) % testimonials.length],
+    filteredTestimonials[index % filteredTestimonials.length],
+    filteredTestimonials[(index + 1) % filteredTestimonials.length],
+    filteredTestimonials[(index + 2) % filteredTestimonials.length],
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-gradient-to-r from-rose-100 via-amber-100 to bg-yellow-200">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h3 className="text-3xl md:text-4xl font-bold mb-4">
             What Our <span className="text-amber-500">Clients Say</span>
           </h3>
@@ -148,15 +157,35 @@ const Testimonials = () => {
           </p>
         </div>
 
-        {/* Testimonial cards without animation */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 transition-all duration-500">
+        {/* Categories */}
+        <div className="flex justify-center mb-10 flex-wrap gap-4">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              className={`px-4 py-2 rounded-full font-semibold ${
+                activeCategory === cat
+                  ? "bg-amber-500 text-white shadow-lg"
+                  : "bg-white text-gray-700 border border-gray-300 hover:bg-amber-200"
+              } transition`}
+              onClick={() => setActiveCategory(cat)}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        {/* Testimonial cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {visibleCards.map((t, i) => (
             <div
               key={i}
-              className="bg-gray-50 p-8 rounded-xl border border-gray-200 shadow-md"
+              className="bg-white p-8 rounded-xl border border-gray-200 shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300"
             >
               <div className="flex items-center mb-4">
-                <div className="w-12 h-12 rounded-full bg-blue-200 flex items-center justify-center font-bold text-blue-900 mr-4">
+                <div
+                  className="w-12 h-12 rounded-full flex items-center justify-center font-bold mr-4 text-white"
+                  style={{ backgroundColor: `hsl(${i * 60}, 70%, 50%)` }}
+                >
                   {t.name.charAt(0)}
                 </div>
                 <div>
@@ -164,12 +193,17 @@ const Testimonials = () => {
                   <p className="text-gray-600 text-sm">{t.role}</p>
                 </div>
               </div>
+
+              <div className="text-gray-300 text-4xl mb-2">“</div>
               <p className="text-gray-700 italic">"{t.review}"</p>
-              <div className="mt-4 text-yellow-400">
-                {Array.from({ length: Math.floor(t.rating) }).map((_, i) => (
-                  <FontAwesomeIcon key={i} icon={faStar} />
+
+              <div className="mt-4 text-yellow-400 flex space-x-1">
+                {Array.from({ length: Math.floor(t.rating) }).map((_, idx) => (
+                  <FontAwesomeIcon key={idx} icon={faStar} title={`${t.rating} Stars`} />
                 ))}
-                {t.rating % 1 !== 0 && <FontAwesomeIcon icon={faStarHalfAlt} />}
+                {t.rating % 1 !== 0 && (
+                  <FontAwesomeIcon icon={faStarHalfAlt} title={`${t.rating} Stars`} />
+                )}
               </div>
             </div>
           ))}

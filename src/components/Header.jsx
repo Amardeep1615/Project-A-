@@ -22,7 +22,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-5 shadow-lg sticky top-0 z-50 ">
+    <header className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-4 shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center space-x-2">
           <div className="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center shadow-md">
@@ -109,5 +109,6 @@ const Header = () => {
     </header>
   );
 };
+
 
 export default Header;
