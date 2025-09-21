@@ -79,7 +79,7 @@ const Features = () => {
 
       {/* 2nd code */}
       <h1 className="text-3xl md:text-4xl font-bold mb-4 mt-2 text-center">
-        Travel through AI <span className="text-amber-500">Technology and become a Master Coder.</span>
+        Travel through AI Technology and become a <span className="text-amber-500">Master Coder.</span>
       </h1>
 
       <p className="text-gray-600 max-w-2xl mx-auto  ">
@@ -99,7 +99,7 @@ const Features = () => {
           alt="AI & Coding"
           className="w-full md:w-1/2 h-80 object-cover rounded-xl shadow-2xl mb-6 md:mb-0"
         />
-        <div className="md:ml-10 text-white md:w-1/2 space-y-4">
+        <div className="md:ml-10 text-black md:w-1/2 space-y-4">
           <h2 className="text-4xl font-bold">Master Coding & AI</h2>
           <p>Learn AI & Machine Learning fundamentals while coding in Python, JavaScript, and more.</p>
           <ul className="list-disc list-inside space-y-2">
@@ -122,7 +122,7 @@ const Features = () => {
         3. Learn at your own pace and gain practical experience to thrive in the modern world.
       </p>
 
-      <div className="bg-green-600 px-6 py-12 flex flex-col md:flex-row items-center">
+      <div className="bg-pink-900 px-6 py-12 flex flex-col md:flex-row items-center">
         <div className="md:mr-10 md:w-1/2 text-white space-y-4">
           <h2 className="text-4xl font-bold">Learn from Experts</h2>
           <p>Get guidance from scientists, mathematicians, and coders with practical knowledge evaluation.</p>
@@ -145,15 +145,15 @@ const Features = () => {
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-4">
         Master English & <span className="text-amber-500">Communication Skills</span>
       </h1>
-      <p className="text-gray-600 max-w-2xl mx-auto text-center">
+      <p className="text-gray-600 max-w-2xl mx-auto ">
         1.Improve your grammar,vocabulary, and enhance your writing and speaking abilities.
       </p>
-      <p className="text-gray-600 max-w-2xl mx-auto text-center mb-2">
+      <p className="text-gray-600 max-w-2xl mx-auto  mb-2">
         2.Professional communication skills to succeed in interview and real-world interactions.
       </p>
 
-      <div className="bg-orange-500 px-6 py-12">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-12">
+      <div className="bg-purple-900 px-6 py-12">
+        <h2 className="text-3xl md:text-5xl font-bold text-center text-white mb-12">
           English & Communication
         </h2>
 
@@ -202,8 +202,8 @@ const Features = () => {
       </p>
 
 
-      <div className="bg-blue-800 px-6 py-12 flex flex-col md:flex-row items-center">
-        <div className="md:w-1/2 text-white space-y-4">
+      <div className="bg-indigo-700 px-6 py-12 flex flex-col md:flex-row items-center">
+        <div className="md:w-1/2 text-black space-y-4">
           <h2 className="text-4xl font-bold">Prepare for the Job Market</h2>
           <p>Learn career-oriented skills, build resumes, and prepare for interviews.</p>
           <ul className="list-disc list-inside space-y-2">
@@ -276,8 +276,8 @@ const Features = () => {
       </p>
 
 
-      <div className="bg-indigo-600 px-6 py-12">
-        <h2 className="text-3xl md:text-5xl font-extrabold text-center text-white mb-12">
+      <div className="bg-indigo-900 px-6 py-12">
+        <h2 className="text-3xl md:text-5xl font-bold text-center text-white mb-12">
           Social Skills & Coding Levels
         </h2>
 

@@ -50,7 +50,7 @@ const Header = () => {
           <div className="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center shadow-md">
             <span className="text-blue-900 font-bold text-xl">A</span>
           </div>
-          <h1 className="text-3xl font-bold tracking-wide">
+          <h1 className="text-3xl font-bold  tracking-wide">
             Project <span className="text-yellow-400">A</span>
           </h1>
 
