@@ -43,6 +43,15 @@
   }
 }
 
+/* Specific rule for exact 768px tablet width */
+@media (width: 768px) {
+  .app-container {
+    padding: 16px; /* customize if needed */
+    font-size: 15px; /* customize if needed */
+    background-color: #eaeaea; /* customize if needed */
+  }
+}
+
 /* Large devices / laptops (1025px - 1440px) */
 @media (min-width: 1025px) and (max-width: 1440px) {
   .app-container {
