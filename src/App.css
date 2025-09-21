@@ -1,8 +1,26 @@
-/* Extra small devices / phones (max-width: 424px) */
-@media (max-width: 424px) {
+/* Extra small devices / phones (max-width: 320px) */
+@media (max-width: 320px) {
+  .app-container {
+    padding: 6px;
+    font-size: 11px;
+    background-color: #fafafa;
+  }
+}
+
+/* Small phones (321px - 374px) */
+@media (min-width: 321px) and (max-width: 374px) {
+  .app-container {
+    padding: 7px;
+    font-size: 12px;
+    background-color: #f9f9f9;
+  }
+}
+
+/* iPhone X / 12 / 13 / 14 (375px - 424px) */
+@media (min-width: 375px) and (max-width: 424px) {
   .app-container {
     padding: 8px;
-    font-size: 12px;
+    font-size: 13px;
     background-color: #f8f8f8;
   }
 }
@@ -16,21 +34,12 @@
   }
 }
 
-/* Specific for 768px exactly */
-@media (min-width: 768px) and (max-width: 768px) {
-  .app-container {
-    padding: 14px;
-    font-size: 15px;
-    background-color: #eaeaea;
-  }
-}
-
-/* Medium devices / tablets (769px - 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
+/* Medium devices / tablets (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
   .app-container {
     padding: 16px;
-    font-size: 16px;
-    background-color: #e8e8e8;
+    font-size: 15px;
+    background-color: #eaeaea;
   }
 }
 

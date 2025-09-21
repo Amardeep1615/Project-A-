@@ -76,7 +76,7 @@ const Hero = () => {
               <img
                 src="/com.jpg"
                 alt="Innovation"
-                className="w-full h-auto rounded-b-lg"
+                className=" rounded-b-lg"
               />
             </div>
           </div>
