@@ -30,6 +30,8 @@ import GetInTouch from "../pages/GetinTouch";
 
 
 
+
+
 function AppRouting() {
    return (
     <div className="bg-white text-gray-800 font-sans flex flex-col min-h-screen">
@@ -59,6 +61,7 @@ function AppRouting() {
       <Route path="/status" element={<ApiStatus/>}/>
       <Route path="/help" element={<Help/>}/>
       <Route path="/getintouchp" element={<GetInTouch/>}/>
+      
 
 
 

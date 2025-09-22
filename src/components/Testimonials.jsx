@@ -146,11 +146,11 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-r from-rose-100 via-amber-100 to bg-yellow-200">
+    <section className="py-16">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
           <h3 className="text-3xl md:text-4xl font-bold mb-4">
-            What Our <span className="text-amber-500">Clients Say</span>
+            What Our <span className="text-blue-900">Clients Say</span>
           </h3>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Don't just take our word for it - hear from our satisfied customers.

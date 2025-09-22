@@ -1,30 +1,101 @@
+// src/components/StudyNavbar.jsx
 import React, { useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const subjectCategories = {
-  Engineering: ["CSE", "ECE", "EEE", "Mechanical", "Civil", "IT", "AI/ML", "IoT", "Aerospace", "Automotive"],
-  Medical: ["MBBS", "Nursing", "Dentistry", "Pharmacy", "Physiotherapy", "Public Health", "Biotechnology"],
-  Law: ["Corporate Law", "Criminal Law", "Civil Law", "International Law", "Constitutional Law"],
-  Management: ["MBA", "Marketing", "Finance", "Human Resources", "Operations", "Entrepreneurship"],
-  Commerce: ["B.Com", "Accounting", "Taxation", "Auditing", "Banking", "Insurance"],
-  Arts: ["History", "Political Science", "Sociology", "Psychology", "Philosophy", "Geography", "Languages"],
-  Science: ["Physics", "Chemistry", "Biology", "Environmental Science", "Astronomy"],
-  Mathematics: ["Algebra", "Calculus", "Statistics", "Trigonometry", "Geometry"],
-  School: ["Math", "Science", "Social Studies", "English", "Computer", "Languages"],
-  Languages: ["English", "French", "German", "Spanish", "Chinese", "Hindi", "Telugu", "Tamil"],
-  "Interview Prep": ["HR Questions", "Coding", "Resume Tips", "Mock Interviews", "Projects"],
-  Aptitude: ["Quantitative", "Logical Reasoning", "Verbal", "Puzzles", "Data Interpretation"],
-  Programming: ["C", "C++", "Java", "Python", "JavaScript", "Go", "Kotlin", "Swift", "Ruby", "PHP", "Rust"],
-  "Web Dev": ["HTML", "CSS", "JavaScript", "React", "Next.js", "Node.js", "Tailwind", "Express", "Django", "Flask"],
-  "Mobile Dev": ["React Native", "Flutter", "Kotlin", "Swift", "Android", "iOS"],
-  "Game Dev": ["Unity", "Unreal Engine", "C#", "Blender", "2D Games", "3D Games"],
-  "UI/UX & Design": ["Figma", "Adobe XD", "Canva", "Photoshop", "Illustrator"],
-  DSA: ["Arrays", "Linked List", "Stacks", "Queues", "Trees", "Graphs", "Sorting", "Searching", "Hashing", "Dynamic Programming"],
-  "AI & ML": ["Machine Learning", "Deep Learning", "Data Science", "NLP", "Computer Vision", "Generative AI", "Reinforcement Learning"],
-  "Cyber Security": ["Ethical Hacking", "Network Security", "Pen Testing", "Forensics", "Cryptography"],
-  Blockchain: ["Bitcoin", "Ethereum", "Smart Contracts", "Web3", "NFTs"],
-  Cloud: ["AWS", "Azure", "Google Cloud", "Heroku", "DigitalOcean", "Cloudflare"],
-  DevOps: ["Linux", "Docker", "Kubernetes", "CI/CD", "Ansible", "Terraform", "Jenkins", "Prometheus"],
-  Database: ["MySQL", "PostgreSQL", "MongoDB", "Oracle", "SQLite", "MariaDB", "Redis", "Cassandra", "Firebase"],
+  Programming: [
+    { name: "Python", link: "/codingpy" },
+    { name: "Java", link: "/programming/java" },
+    { name: "C", link: "/programming/c" },
+    { name: "C++", link: "/programming/cpp" },
+    { name: "JavaScript", link: "/programming/javascript" },
+  ],
+  "Web Development": [
+    { name: "HTML", link: "/webdev/html" },
+    { name: "CSS", link: "/webdev/css" },
+    { name: "JavaScript", link: "/webdev/javascript" },
+    { name: "ReactJS", link: "/webdev/react" },
+    { name: "Bootstrap", link: "/webdev/bootstrap" },
+    { name: "TailwindCSS", link: "/webdev/tailwind" },
+    { name: "Django", link: "/webdev/django" },
+    { name: "Flask", link: "/webdev/flask" },
+    { name: "Spring Boot", link: "/webdev/springboot" },
+  ],
+  Databases: [
+    { name: "SQL", link: "/database/sql" },
+    { name: "MySQL", link: "/database/mysql" },
+    { name: "PostgreSQL", link: "/database/postgresql" },
+    { name: "MongoDB", link: "/database/mongodb" },
+  ],
+  "Data Science & AI": [
+    { name: "Python", link: "/ai/python" },
+    { name: "Pandas", link: "/ai/pandas" },
+    { name: "NumPy", link: "/ai/numpy" },
+    { name: "Machine Learning", link: "/ai/ml" },
+    { name: "Deep Learning", link: "/ai/deep-learning" },
+    { name: "AI", link: "/ai/ai" },
+  ],
+  Science: [
+    { name: "Physics", link: "/science/physics" },
+    { name: "Chemistry", link: "/science/chemistry" },
+    { name: "Biology", link: "/science/biology" },
+    { name: "Environmental Science", link: "/science/environmental" },
+    { name: "Astronomy", link: "/science/astronomy" },
+  ],
+  Mathematics: [
+    { name: "Algebra", link: "/math/algebra" },
+    { name: "Calculus", link: "/math/calculus" },
+    { name: "Statistics", link: "/math/statistics" },
+    { name: "Trigonometry", link: "/math/trigonometry" },
+    { name: "Geometry", link: "/math/geometry" },
+  ],
+  School: [
+    { name: "Math", link: "/school/math" },
+    { name: "Science", link: "/school/science" },
+    { name: "Social Studies", link: "/school/social-studies" },
+    { name: "English", link: "/school/english" },
+    { name: "Computer", link: "/school/computer" },
+    { name: "Languages", link: "/school/languages" },
+  ],
+  Languages: [
+    { name: "English", link: "/languages/english" },
+    { name: "French", link: "/languages/french" },
+    { name: "German", link: "/languages/german" },
+    { name: "Spanish", link: "/languages/spanish" },
+    { name: "Chinese", link: "/languages/chinese" },
+    { name: "Hindi", link: "/languages/hindi" },
+    { name: "Telugu", link: "/languages/telugu" },
+    { name: "Tamil", link: "/languages/tamil" },
+  ],
+  "Interview Prep": [
+    { name: "HR Questions", link: "/interview/hr" },
+    { name: "Coding", link: "/interview/coding" },
+    { name: "Resume Tips", link: "/interview/resume" },
+    { name: "Mock Interviews", link: "/interview/mock" },
+    { name: "Projects", link: "/interview/projects" },
+  ],
+  Aptitude: [
+    { name: "Quantitative", link: "/aptitude/quantitative" },
+    { name: "Logical Reasoning", link: "/aptitude/logical" },
+    { name: "Verbal", link: "/aptitude/verbal" },
+    { name: "Puzzles", link: "/aptitude/puzzles" },
+    { name: "Data Interpretation", link: "/aptitude/data-interpretation" },
+  ],
+  "Mobile Dev": [
+    { name: "React Native", link: "/mobile/react-native" },
+    { name: "Flutter", link: "/mobile/flutter" },
+    { name: "Kotlin", link: "/mobile/kotlin" },
+    { name: "Swift", link: "/mobile/swift" },
+    { name: "Android", link: "/mobile/android" },
+    { name: "iOS", link: "/mobile/ios" },
+  ],
+  "Cyber Security": [
+    { name: "Ethical Hacking", link: "/cyber/ethical-hacking" },
+    { name: "Network Security", link: "/cyber/network" },
+    { name: "Pen Testing", link: "/cyber/pen-testing" },
+    { name: "Forensics", link: "/cyber/forensics" },
+    { name: "Cryptography", link: "/cyber/cryptography" },
+  ],
 };
 
 const StudyNavbar = () => {
@@ -33,8 +104,8 @@ const StudyNavbar = () => {
   const buttonRefs = useRef({});
   const dropdownRef = useRef(null);
   const scrollRef = useRef(null);
+  const navigate = useNavigate();
 
-  // Toggle category dropdown
   const toggleCategory = (category) => {
     if (activeCategory === category) {
       setActiveCategory(null);
@@ -42,22 +113,15 @@ const StudyNavbar = () => {
       const rect = buttonRefs.current[category].getBoundingClientRect();
       setDropdownPos({
         top: rect.bottom + window.scrollY,
-        left: rect.left + rect.width / 2, // ✅ center of button
+        left: rect.left + rect.width / 2,
       });
       setActiveCategory(category);
     }
   };
 
-  // Scroll controls
-  const scrollLeft = () => {
-    scrollRef.current.scrollBy({ left: -200, behavior: "smooth" });
-  };
+  const scrollLeft = () => scrollRef.current.scrollBy({ left: -200, behavior: "smooth" });
+  const scrollRight = () => scrollRef.current.scrollBy({ left: 200, behavior: "smooth" });
 
-  const scrollRight = () => {
-    scrollRef.current.scrollBy({ left: 200, behavior: "smooth" });
-  };
-
-  // Close dropdown on outside click
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -74,21 +138,11 @@ const StudyNavbar = () => {
 
   return (
     <div className="relative w-full p-3">
-      {/* Scrollable Navbar with Arrows */}
       <div className="flex items-center gap-2">
-        {/* Left Arrow */}
-        <button
-          onClick={scrollLeft}
-          className="px-2 text-xl bg-white rounded shadow hover:bg-gray-100"
-        >
+        <button onClick={scrollLeft} className="px-2 text-xl bg-white rounded shadow hover:bg-gray-100">
           &lt;
         </button>
-
-        {/* Categories */}
-        <div
-          ref={scrollRef}
-          className="flex gap-4 overflow-hidden w-full"
-        >
+        <div ref={scrollRef} className="flex gap-4 overflow-hidden w-full">
           {Object.keys(subjectCategories).map((category) => (
             <div key={category} className="relative inline-block">
               <button
@@ -101,32 +155,24 @@ const StudyNavbar = () => {
             </div>
           ))}
         </div>
-
-        {/* Right Arrow */}
-        <button
-          onClick={scrollRight}
-          className="px-2 text-xl bg-white rounded shadow hover:bg-gray-100"
-        >
+        <button onClick={scrollRight} className="px-2 text-xl bg-white rounded shadow hover:bg-gray-100">
           &gt;
         </button>
       </div>
 
-      {/* Floating Dropdown */}
       {activeCategory && (
         <div
           ref={dropdownRef}
           className="fixed mt-2 bg-white border border-gray-200 rounded-xl px-3 shadow-lg z-[9999] w-48 transform -translate-x-1/2"
-          style={{
-            top: dropdownPos.top + "px",
-            left: dropdownPos.left + "px",
-          }}
+          style={{ top: dropdownPos.top + "px", left: dropdownPos.left + "px" }}
         >
           {subjectCategories[activeCategory].map((subject) => (
             <div
-              key={subject}
+              key={subject.name}
+              onClick={() => navigate(subject.link)}
               className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
             >
-              {subject}
+              {subject.name}
             </div>
           ))}
         </div>

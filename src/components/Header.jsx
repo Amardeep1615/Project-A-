@@ -30,21 +30,23 @@ const Header = () => {
 
     const filtered = searchData.filter(
       (item) =>
-        item.keyword.toLowerCase().includes(query) ||
-        item.category.toLowerCase().includes(query)
+        (item.keyword && item.keyword.toLowerCase().includes(query)) ||
+        (item.category && item.category.toLowerCase().includes(query))
     );
     setResults(filtered);
   };
 
-  // Navigate when selecting
+  // Navigate when selecting a result
   const handleSelectResult = (link) => {
-    navigate(link);
-    setSearchQuery("");
-    setResults([]);
+    if (link && link !== "") {
+      navigate(link);
+      setSearchQuery("");
+      setResults([]);
+    }
   };
 
   return (
-    <header className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-4 shadow-lg sticky top-0 z-50">
+    <header className="bg-blue-900 text-white py-4 shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center space-x-2">
@@ -56,9 +58,9 @@ const Header = () => {
           </h1>
         </div>
 
-        {/* Search Bar (Visible on all devices) */}
-        <div className="relative ml-4 flex items-center search-container w-40 sm:w-64 md:w-80">
-          <div className="flex items-center bg-white rounded-full px-3 py-1 shadow-sm w-full">
+        {/* Search Bar */}
+        <div className="relative ml-4 flex items-center flex-1">
+          <div className="flex items-center bg-white rounded-full px-2 py-1 shadow-sm ">
             <FontAwesomeIcon icon={faSearch} className="text-gray-500 mr-2" />
             <input
               type="text"
@@ -76,12 +78,12 @@ const Header = () => {
                 <div
                   key={idx}
                   onClick={() => handleSelectResult(item.link)}
-                  className="px-4 py-2 cursor-pointer hover:bg-gray-100 text-black"
+                  className={`px-4 py-2 cursor-pointer hover:bg-gray-100 text-black ${
+                    !item.link ? "opacity-50 cursor-not-allowed" : ""
+                  }`}
                 >
                   <span className="font-semibold">{item.keyword}</span>
-                  <span className="text-gray-500 text-sm ml-2">
-                    ({item.category})
-                  </span>
+                  <span className="text-gray-500 text-sm ml-2">({item.category})</span>
                 </div>
               ))}
             </div>
@@ -100,32 +102,21 @@ const Header = () => {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-8 items-center ml-6">
-            <Link to="/" className="hover:text-amber-500 transition-colors font-medium">
-              Home
-            </Link>
-            <Link to="/about" className="hover:text-amber-500 transition-colors font-medium">
-              About
-            </Link>
-            <Link to="/services" className="hover:text-amber-500 transition-colors font-medium">
-              Services
-            </Link>
-            <Link to="/contact" className="hover:text-amber-500 transition-colors font-medium">
-              Contact
-            </Link>
+            <Link to="/" className="hover:text-amber-500 transition-colors font-medium">Home</Link>
+            <Link to="/about" className="hover:text-amber-500 transition-colors font-medium">About</Link>
+            <Link to="/services" className="hover:text-amber-500 transition-colors font-medium">Services</Link>
+            <Link to="/contact" className="hover:text-amber-500 transition-colors font-medium">Contact</Link>
             <Link
               to="/GetStarted"
               className="ml-4 bg-amber-500 text-blue-900 px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl"
             >
               Get Started
             </Link>
-            <Link to="/Signin" className="hover:text-amber-500 transition-colors font-medium">
-              Signin
-            </Link>
+            <Link to="/Signin" className="hover:text-amber-500 transition-colors font-medium">Signin</Link>
           </nav>
 
           {/* Mobile Nav Toggle */}
           <button
-            id="menu-toggle"
             className="md:hidden focus:outline-none ml-4"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -135,12 +126,7 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div
-        id="mobile-menu"
-        className={`md:hidden bg-blue-800 dark:bg-gray-900 px-6 py-4 ${
-          isMobileMenuOpen ? "block" : "hidden"
-        }`}
-      >
+      <div className={`md:hidden bg-blue-800 dark:bg-gray-900 px-6 py-4 ${isMobileMenuOpen ? "block" : "hidden"}`}>
         <div className="flex flex-col space-y-4">
           <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
           <Link to="/about" onClick={() => setIsMobileMenuOpen(false)}>About</Link>

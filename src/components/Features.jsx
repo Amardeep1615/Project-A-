@@ -51,7 +51,7 @@ const Features = () => {
       </p>
 
 
-      <div className="bg-gradient-to-r from-purple-700 via-purple-800 to-indigo-900 flex flex-col items-center justify-center px-6 py-12 rounded-xl shadow-xl text-white">
+      <div className="bg-blue-900 flex flex-col items-center justify-center px-6 py-12 rounded-xl shadow-xl text-white border-2 border-amber-950">
         <div className="flex flex-col md:flex-row items-center justify-center w-full gap-8 md:gap-16">
           {/* Scientist Image */}
           <img
@@ -92,14 +92,14 @@ const Features = () => {
         3. Gain confidence in AI, machine learning, and full-stack development.
       </p>
 
-      <div className="bg-gradient-to-r bg-amber-500 px-6 py-12 flex flex-col md:flex-row items-center">
+      <div className=" bg-blue-900 px-6 py-12 flex flex-col md:flex-row items-center">
 
         <img
           src="/cod33.jpg"
           alt="AI & Coding"
           className="w-full md:w-1/2 h-80 object-cover rounded-xl shadow-2xl mb-6 md:mb-0"
         />
-        <div className="md:ml-10 text-black md:w-1/2 space-y-4">
+        <div className="md:ml-10 text-amber-500 md:w-1/2 space-y-4">
           <h2 className="text-4xl font-bold">Master Coding & AI</h2>
           <p>Learn AI & Machine Learning fundamentals while coding in Python, JavaScript, and more.</p>
           <ul className="list-disc list-inside space-y-2">
@@ -122,8 +122,8 @@ const Features = () => {
         3. Learn at your own pace and gain practical experience to thrive in the modern world.
       </p>
 
-      <div className="bg-pink-900 px-6 py-12 flex flex-col md:flex-row items-center">
-        <div className="md:mr-10 md:w-1/2 text-white space-y-4">
+      <div className="bg-orange-500 px-6 py-12 flex flex-col md:flex-row items-center">
+        <div className="md:mr-10 md:w-1/2 text-blue-900 space-y-4">
           <h2 className="text-4xl font-bold">Learn from Experts</h2>
           <p>Get guidance from scientists, mathematicians, and coders with practical knowledge evaluation.</p>
           <ul className="list-disc list-inside space-y-2">
@@ -152,7 +152,7 @@ const Features = () => {
         2.Professional communication skills to succeed in interview and real-world interactions.
       </p>
 
-      <div className="bg-purple-900 px-6 py-12">
+      <div className="bg-amber-500 px-6 py-12">
         <h2 className="text-3xl md:text-5xl font-bold text-center text-white mb-12">
           English & Communication
         </h2>
@@ -202,8 +202,8 @@ const Features = () => {
       </p>
 
 
-      <div className="bg-indigo-700 px-6 py-12 flex flex-col md:flex-row items-center">
-        <div className="md:w-1/2 text-black space-y-4">
+      <div className="bg-blue-900 px-6 py-12 flex flex-col md:flex-row items-center">
+        <div className="md:w-1/2 text-amber-500 space-y-4">
           <h2 className="text-4xl font-bold">Prepare for the Job Market</h2>
           <p>Learn career-oriented skills, build resumes, and prepare for interviews.</p>
           <ul className="list-disc list-inside space-y-2">
@@ -234,7 +234,7 @@ const Features = () => {
       </p>
 
 
-      <div className="bg-purple-700 px-6 py-12">
+      <div className="bg-blue-900 px-6 py-12">
         <h2 className="text-4xl font-bold text-center text-white mb-8">General Sciences</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Physics */}
@@ -276,9 +276,9 @@ const Features = () => {
       </p>
 
 
-      <div className="bg-indigo-900 px-6 py-12">
+      <div className="bg-blue-900 px-6 py-12">
         <h2 className="text-3xl md:text-5xl font-bold text-center text-white mb-12">
-          Social Skills & Coding Levels
+           Coding Levels
         </h2>
 
         <div className="flex flex-col md:flex-row justify-center items-stretch gap-8">

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden min-h-screen bg-gradient-to-r from-blue-900 via-blue-700 to-purple-700">
+    <section className="relative overflow-hidden  bg-blue-900">
       
       {/* Background Images */}
       
