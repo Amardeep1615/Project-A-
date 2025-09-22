@@ -7,7 +7,7 @@ const CallFun = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <section className="py-16 bg-indigo-100">
+    <section className="py-16 bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <h3 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
           Ready to <span className="text-amber-500">Transform Your Learning</span> Experience?
