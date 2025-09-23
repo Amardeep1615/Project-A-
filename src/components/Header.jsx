@@ -46,7 +46,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-4 shadow-lg sticky top-0 z-50">
+    <header className="bg-black text-white py-4 shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center space-x-2">
@@ -58,18 +58,20 @@ const Header = () => {
           </h1>
         </div>
 
-        {/* Search Bar */}
-        <div className="relative ml-4 flex items-center flex-1">
-          <div className="flex items-center bg-white rounded-full px-2 py-1 shadow-sm ">
-            <FontAwesomeIcon icon={faSearch} className="text-gray-500 mr-2" />
-            <input
-              type="text"
-              placeholder="Search subjects..."
-              value={searchQuery}
-              onChange={handleInputChange}
-              className="bg-transparent focus:outline-none text-black text-sm w-full"
-            />
-          </div>
+       {/* Search Bar */}
+<div className="relative ml-0 md:ml-4 flex items-center w-full md:w-auto flex-1">
+  <div className="flex items-center bg-white rounded-full px-3 py-2 shadow-sm w-full md:w-72">
+    <FontAwesomeIcon icon={faSearch} className="text-gray-500 mr-2" />
+    <input
+      type="text"
+      placeholder="Search subjects..."
+      value={searchQuery}
+      onChange={handleInputChange}
+      className="bg-transparent focus:outline-none text-black text-sm w-full"
+    />
+  </div>
+
+
 
           {/* Search results dropdown */}
           {results.length > 0 && (
@@ -88,6 +90,7 @@ const Header = () => {
               ))}
             </div>
           )}
+          
         </div>
 
         {/* Dark Mode Toggle + Desktop Nav */}

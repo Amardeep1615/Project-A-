@@ -8,7 +8,7 @@
 /* Small phones (321px - 374px) */
 @media (min-width: 321px) {
   .app-container {
-    padding: 7px;
+    padding: 10px;
     font-size: 12px;
     background-color: #f9f9f9;
   }
