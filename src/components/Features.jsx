@@ -157,7 +157,7 @@ const Features = () => {
       </p>
 
       <div className=" px-6 py-12 rounded-xl shadow-xl">
-        <h6 className="text-3xl md:text-5xl font-bold text-center text-black mb-12">
+        <h6 className="text-3xl font-bold text-center text-black mb-12">
           English & Communication
         </h6>
 
