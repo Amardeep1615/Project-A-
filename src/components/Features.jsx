@@ -50,33 +50,33 @@ const Features = () => {
         2.Unlock your potential and turn your ideas into real achievements.
       </p>
 
+<div className="px-6 py-12">
 
-      <div className="bg- flex flex-col items-center justify-center px-6 py-12 rounded-xl shadow-xl text-white">
-        <div className="flex flex-col md:flex-row items-center justify-center w-full gap-8 md:gap-16">
-          {/* Scientist Image */}
-          <img
-            src="/olderadultscientist.jpg"
-            alt="A scientist looking through a microscope"
-            className="w-64 h-64 md:w-72 md:h-72 object-cover rounded-full border-4 border-white shadow-2xl transform transition duration-500 hover:scale-105"
-          />
+  {/* Card Section */}
+  <div className="bg-white px-6 py-12 flex flex-col md:flex-row items-center rounded-xl shadow-xl">
 
-          {/* Features List */}
-          <ul className="text-xl md:text-2xl text-black font-serif space-y-4 md:ml-4">
-            <li>✔ Knowledge (science, arts, culture)</li>
-            <li>✔ Skills (critical thinking, communication, technical)</li>
-            <li>✔ Values & Ethics (respect, integrity, empathy)</li>
-            <li>✔ Creativity & Innovation (adaptation in the modern world)</li>
-          </ul>
-        </div>
+    {/* Left Side Image */}
+    <img
+      src="/cod1.jpg"
+      alt="A scientist looking through a microscope"
+      className="w-full md:w-1/2 h-80 object-cover rounded-xl shadow-2xl mb-6 md:mb-0"
+    />
 
-        {/* Highlighted Text */}
-        <h1 className="mt-10 text-3xl md:text-4xl font-bold text-amber-500 font-cursive text-center">
-          <span className="mr-2">★</span>Focus on your target<span className="ml-2">★</span>
-        </h1>
-      </div>
-
-
-
+    {/* Right Side Content */}
+    <div className="md:ml-10 text-black md:w-1/2 space-y-4">
+      <h2 className="text-4xl font-bold text-amber-600">Focus on Your Target</h2>
+      <p>
+        Build a strong foundation of knowledge and skills while maintaining values and creativity.
+      </p>
+      <ul className="list-disc list-inside space-y-2">
+        <li>Knowledge (science, arts, culture)</li>
+        <li>Skills (critical thinking, communication, technical)</li>
+        <li>Values & Ethics (respect, integrity, empathy)</li>
+        <li>Creativity & Innovation (adaptation in the modern world)</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 
       {/* 2nd code */}
@@ -196,8 +196,8 @@ const Features = () => {
           </div>
         </div>
       </div>
-    
-      
+
+
       {/* 5th code */}
       <h2 className="text-4xl font-bold mb-6 text-center mt-4">Job Market <span className="text-amber-500"> Insights </span></h2>
       <p className="max-w-2xl mx-auto ">
@@ -326,7 +326,7 @@ const Features = () => {
 
 
 
-     {/* 8th code */}
+      {/* 8th code */}
 
       <div className="max-w-7xl mx-auto px-6 py-12  rounded-xl shadow-lg">
         <div className="text-center mb-12">
