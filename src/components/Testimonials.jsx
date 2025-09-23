@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
+import FadeInSection from "./FadeInSection";
  
 
 const testimonials = [
@@ -147,6 +148,7 @@ const Testimonials = () => {
 
   return (
     <section className="py-16 ">
+      <FadeInSection>
       <div className="max-w-7xl mx-auto px-6 rounded-xl shadow-xl ">
         <div className="text-center ">
           <h3 className="text-3xl md:text-4xl font-bold mb-4">
@@ -209,6 +211,7 @@ const Testimonials = () => {
           ))}
         </div>
       </div>
+      </FadeInSection>
     </section>
   );
 };

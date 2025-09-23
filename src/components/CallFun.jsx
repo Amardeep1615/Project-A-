@@ -2,12 +2,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ScheduleDemo from "../pages/ScheduleDemo";
+import FadeInSection from "./FadeInSection";
 
 const CallFun = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
     <section className="py-16 ">
+      <FadeInSection>
       <div className="max-w-7xl mx-auto px-6 text-center">
         <h3 className="text-3xl md:text-4xl font-bold mb-2 text-gray-900">
           Ready to <span className="text-amber-500">Transform Your Learning</span> Experience?
@@ -49,6 +51,7 @@ const CallFun = () => {
           </div>
         </div>
       )}
+      </FadeInSection>
     </section>
   );
 };

@@ -12,6 +12,8 @@ import {
   faCodeBranch,
 } from "@fortawesome/free-solid-svg-icons";
 
+import FadeInSection from "./FadeInSection";
+
 const features = [
   { icon: faBolt, title: "Fast Performance", description: "Optimized solutions that deliver lightning-fast performance for your business needs." },
   { icon: faShieldAlt, title: "Secure Solutions", description: "Enterprise-grade security to protect your data and ensure privacy compliance." },
@@ -40,7 +42,10 @@ const Features = () => {
   ];
 
   return (
+    
+
     <section className=" bg-gray-50">
+      <FadeInSection>
       <h1 className="text-3xl md:text-4xl font-bold mb-4 mt-2 text-center">Motivate to bring you <span className="text-amber-500"> more interesting ideas.</span></h1>
 
       <p className="text-gray-600 max-w-2xl mx-auto ">
@@ -49,7 +54,7 @@ const Features = () => {
       <p className="text-gray-600 max-w-2xl mx-auto mb-2 ">
         2.Unlock your potential and turn your ideas into real achievements.
       </p>
-
+     
 <div className="px-6 py-12">
 
   {/* Card Section */}
@@ -77,8 +82,9 @@ const Features = () => {
     </div>
   </div>
 </div>
+ </FadeInSection>
 
-
+ <FadeInSection>
       {/* 2nd code */}
       <h1 className="text-3xl md:text-4xl font-bold mb-4 mt-2 text-center">
         Travel through AI Technology and become a <span className="text-amber-500">Master Coder.</span>
@@ -111,7 +117,9 @@ const Features = () => {
           </ul>
         </div>
       </div>
+</FadeInSection>
 
+<FadeInSection>
       {/* 3rd code */}
       <h1 className="text-3xl md:text-4xl font-bold mb-4 mt-2 text-center">
         Learn from <span className="text-amber-500">Experts</span> and Enhance Your Skills
@@ -142,10 +150,12 @@ const Features = () => {
           className="w-full md:w-1/2 h-80 object-cover rounded-xl shadow-2xl mt-6 md:mt-0"
         />
       </div>
+</FadeInSection>
 
 
+<FadeInSection>
 
-      {/* 4th code */}
+       {/* 4th code */}
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-4 mt-4">
         Master English & <span className="text-amber-500">Communication Skills</span>
       </h1>
@@ -196,7 +206,9 @@ const Features = () => {
           </div>
         </div>
       </div>
+</FadeInSection>
 
+<FadeInSection>
 
       {/* 5th code */}
       <h2 className="text-4xl font-bold mb-6 text-center mt-4">Job Market <span className="text-amber-500"> Insights </span></h2>
@@ -226,8 +238,10 @@ const Features = () => {
           />
         </div>
       </div>
+</FadeInSection>
 
 
+<FadeInSection>
       {/* 6th code */}
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-4 mt-4">
         Explore the World of <span className="text-amber-500"> General Sciences </span>
@@ -269,7 +283,9 @@ const Features = () => {
           </div>
         </div>
       </div>
+</FadeInSection>
 
+<FadeInSection>
       {/* 7th code */}
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-4 mt-4">
         Enhance Your Social Skills & <span className="text-amber-500"> Coding Levels</span>
@@ -322,10 +338,10 @@ const Features = () => {
           </div>
         </div>
       </div>
+</FadeInSection>
 
 
-
-
+<FadeInSection>
       {/* 8th code */}
 
       <div className="max-w-7xl mx-auto px-6 py-12  rounded-xl shadow-lg">
@@ -358,8 +374,9 @@ const Features = () => {
           ))}
         </div>
       </div>
-    </section>
+</FadeInSection>
+    </section> 
   );
-};
+}; 
 
 export default Features;
