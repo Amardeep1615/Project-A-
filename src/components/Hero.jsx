@@ -4,10 +4,9 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden min-h-screen bg-gradient-to-r from-blue-900 via-blue-700 to-purple-700">
-      
+    // Removed min-h-screen
+    <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-blue-700 to-purple-700"> 
       {/* Background Images */}
-      
       <img
         src="cod2.jpg"
         alt="Background Computer"
@@ -22,7 +21,8 @@ const Hero = () => {
       ></div>
 
       {/* Main Container */}
-      <div className="max-w-7xl mx-auto px-6 py-24 md:py-32 flex flex-col md:flex-row items-center relative z-10">
+      {/* Reduced py-24 md:py-32 to py-12 md:py-16 */}
+      <div className="max-w-7xl mx-auto px-6 py-12 md:py-16 flex flex-col md:flex-row items-center relative z-10">
         
         {/* Left Text */}
         <div className="md:w-1/2 text-center md:text-left mb-12 md:mb-0">
@@ -30,9 +30,7 @@ const Hero = () => {
             TMK Presents <br />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-purple-400">
               Innovative Solutions
-
             </span>
-            
           </h1>
           <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-lg mx-auto md:mx-0">
             Welcome to our official platform for creativity and innovation. We build digital experiences that matter.
@@ -46,14 +44,14 @@ const Hero = () => {
             >
               Figma
             </Link>
-           
+            
             <Link
               to="ourstorypage"
               className="bg-amber-500 hover:bg-blue-700 text-blue-900 hover:text-black px-6 py-4 rounded-full font-bold shadow-lg hover:shadow-xl transition-all"
             >
               Our Story
             </Link>
-             <Link
+            <Link
               to="LearnMore"
               className=" bg-green-500 text-blue-700 hover:bg-blue-50 px-6 py-4 rounded-full font-medium shadow-lg hover:shadow-xl transition-all"
             >
@@ -81,10 +79,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-
       </div>
-
-    
     </section>
   );
 };

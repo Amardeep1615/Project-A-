@@ -43,7 +43,7 @@ const Features = () => {
     <section className=" bg-gray-50">
       <h1 className="text-3xl md:text-4xl font-bold mb-4 mt-2 text-center">Motivate to bring you <span className="text-amber-500"> more interesting ideas.</span></h1>
 
-      <p className="text-gray-600 max-w-2xl mx-auto text-center">
+      <p className="text-gray-600 max-w-2xl mx-auto ">
         1.Explore a world of knowledge with engaging courses, practical projects, and expert guidance.
       </p>
       <p className="text-gray-600 max-w-2xl mx-auto mb-2 ">
@@ -51,7 +51,7 @@ const Features = () => {
       </p>
 
 
-      <div className="bg-gradient-to-r from-purple-700 via-purple-800 to-indigo-900 flex flex-col items-center justify-center px-6 py-12 rounded-xl shadow-xl text-white">
+      <div className="bg- flex flex-col items-center justify-center px-6 py-12 rounded-xl shadow-xl text-white">
         <div className="flex flex-col md:flex-row items-center justify-center w-full gap-8 md:gap-16">
           {/* Scientist Image */}
           <img
@@ -61,7 +61,7 @@ const Features = () => {
           />
 
           {/* Features List */}
-          <ul className="text-xl md:text-2xl text-white font-serif space-y-4 md:ml-4">
+          <ul className="text-xl md:text-2xl text-black font-serif space-y-4 md:ml-4">
             <li>✔ Knowledge (science, arts, culture)</li>
             <li>✔ Skills (critical thinking, communication, technical)</li>
             <li>✔ Values & Ethics (respect, integrity, empathy)</li>
@@ -74,6 +74,8 @@ const Features = () => {
           <span className="mr-2">★</span>Focus on your target<span className="ml-2">★</span>
         </h1>
       </div>
+
+
 
 
 
@@ -92,7 +94,7 @@ const Features = () => {
         3. Gain confidence in AI, machine learning, and full-stack development.
       </p>
 
-      <div className="bg-gradient-to-r bg-amber-500 px-6 py-12 flex flex-col md:flex-row items-center">
+      <div className="bg- px-6 py-12 flex flex-col md:flex-row items-center rounded-xl shadow-xl">
 
         <img
           src="/cod33.jpg"
@@ -109,6 +111,8 @@ const Features = () => {
           </ul>
         </div>
       </div>
+
+      {/* 3rd code */}
       <h1 className="text-3xl md:text-4xl font-bold mb-4 mt-2 text-center">
         Learn from <span className="text-amber-500">Experts</span> and Enhance Your Skills
       </h1>
@@ -122,8 +126,8 @@ const Features = () => {
         3. Learn at your own pace and gain practical experience to thrive in the modern world.
       </p>
 
-      <div className="bg-pink-900 px-6 py-12 flex flex-col md:flex-row items-center">
-        <div className="md:mr-10 md:w-1/2 text-white space-y-4">
+      <div className=" px-6 py-12 flex flex-col md:flex-row items-center rounded-xl shadow-xl">
+        <div className="md:mr-10 md:w-1/2 text-black space-y-4">
           <h2 className="text-4xl font-bold">Learn from Experts</h2>
           <p>Get guidance from scientists, mathematicians, and coders with practical knowledge evaluation.</p>
           <ul className="list-disc list-inside space-y-2">
@@ -141,8 +145,8 @@ const Features = () => {
 
 
 
-
-      <h1 className="text-3xl md:text-4xl font-bold text-center mb-4">
+      {/* 4th code */}
+      <h1 className="text-3xl md:text-4xl font-bold text-center mb-4 mt-4">
         Master English & <span className="text-amber-500">Communication Skills</span>
       </h1>
       <p className="text-gray-600 max-w-2xl mx-auto ">
@@ -152,10 +156,10 @@ const Features = () => {
         2.Professional communication skills to succeed in interview and real-world interactions.
       </p>
 
-      <div className="bg-purple-900 px-6 py-12">
-        <h2 className="text-3xl md:text-5xl font-bold text-center text-white mb-12">
+      <div className=" px-6 py-12 rounded-xl shadow-xl">
+        <h6 className="text-3xl md:text-5xl font-bold text-center text-black mb-12">
           English & Communication
-        </h2>
+        </h6>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Grammar */}
@@ -192,8 +196,10 @@ const Features = () => {
           </div>
         </div>
       </div>
-
-      <h2 className="text-4xl font-bold mb-6 text-center">Job Market <span className="text-amber-500"> Insights </span></h2>
+    
+      
+      {/* 5th code */}
+      <h2 className="text-4xl font-bold mb-6 text-center mt-4">Job Market <span className="text-amber-500"> Insights </span></h2>
       <p className="max-w-2xl mx-auto ">
         1.Understand industry trends, employability skills, and the roles most in demand today.
       </p>
@@ -202,7 +208,7 @@ const Features = () => {
       </p>
 
 
-      <div className="bg-indigo-700 px-6 py-12 flex flex-col md:flex-row items-center">
+      <div className=" px-6 py-12 flex flex-col md:flex-row items-center rounded-xl shadow-xl">
         <div className="md:w-1/2 text-black space-y-4">
           <h2 className="text-4xl font-bold">Prepare for the Job Market</h2>
           <p>Learn career-oriented skills, build resumes, and prepare for interviews.</p>
@@ -222,8 +228,8 @@ const Features = () => {
       </div>
 
 
-
-      <h1 className="text-3xl md:text-4xl font-bold text-center mb-4">
+      {/* 6th code */}
+      <h1 className="text-3xl md:text-4xl font-bold text-center mb-4 mt-4">
         Explore the World of <span className="text-amber-500"> General Sciences </span>
       </h1>
       <p className="text-gray-600 max-w-2xl mx-auto ">
@@ -234,8 +240,8 @@ const Features = () => {
       </p>
 
 
-      <div className="bg-purple-700 px-6 py-12">
-        <h2 className="text-4xl font-bold text-center text-white mb-8">General Sciences</h2>
+      <div className=" px-6 py-12 rounded-xl shadow-xl">
+        <h6 className="text-3xl font-bold text-center text-black mb-8">General Sciences</h6>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Physics */}
           <div className="bg-white p-6 rounded-xl shadow-lg text-center">
@@ -264,8 +270,8 @@ const Features = () => {
         </div>
       </div>
 
-
-      <h1 className="text-3xl md:text-4xl font-bold text-center mb-4">
+      {/* 7th code */}
+      <h1 className="text-3xl md:text-4xl font-bold text-center mb-4 mt-4">
         Enhance Your Social Skills & <span className="text-amber-500"> Coding Levels</span>
       </h1>
       <p className="text-gray-600 max-w-2xl mx-auto ">
@@ -276,10 +282,10 @@ const Features = () => {
       </p>
 
 
-      <div className="bg-indigo-900 px-6 py-12">
-        <h2 className="text-3xl md:text-5xl font-bold text-center text-white mb-12">
+      <div className="px-6 py-12 rounded-xl shadow-xl">
+        <h6 className="text-3xl  font-bold text-center text-black mb-12">
           Social Skills & Coding Levels
-        </h2>
+        </h6>
 
         <div className="flex flex-col md:flex-row justify-center items-stretch gap-8">
           {/* Level 1 */}
@@ -320,13 +326,14 @@ const Features = () => {
 
 
 
+     {/* 8th code */}
 
-      <div className="max-w-7xl mx-auto px-6 py-12 bg-amber-500 rounded-xl shadow-lg">
+      <div className="max-w-7xl mx-auto px-6 py-12  rounded-xl shadow-lg">
         <div className="text-center mb-12">
-          <h3 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Why Choose <span className="text-black">Project A</span>
+          <h3 className="text-3xl md:text-4xl font-bold mb-4  text-black">
+            Why Choose <span className="text-amber-500">Project A</span>
           </h3>
-          <p className="text-gray-100 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg ">
             We combine innovative technology with creative solutions to deliver exceptional results.
           </p>
         </div>

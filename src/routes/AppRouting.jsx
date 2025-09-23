@@ -16,12 +16,14 @@ import ContactPage from "../pages/ContactPage";
 import Careers from "../pages/CareersPage";
 import Blog from "../pages/BlogPage";
 import Press from "../pages/PressPage";
-import ResumeMaker from "../pages/ResumePage";
 import Documentation from "../pages/DocsPage";
 import GuidePage from "../pages/GuidesPage";
 import ApiStatus from "../pages/APIStatusPage";
 import Help from "../pages/Help";
 import GetInTouch from "../pages/GetinTouch";
+import Python from "../components/Python"
+
+
 
 
 
@@ -45,6 +47,7 @@ function AppRouting() {
       <Route path="/contact" element={<ContactPage/>}/> 
 
       <Route path="/GetStarted" element={<GetStarted/>}/>
+     
     
       <Route path="*" element={<div className="flex justify-center items-center h-full py-20 text-2xl font-bold text-gray-600">
               404 | Page Not Found
@@ -61,6 +64,8 @@ function AppRouting() {
       <Route path="/status" element={<ApiStatus/>}/>
       <Route path="/help" element={<Help/>}/>
       <Route path="/getintouchp" element={<GetInTouch/>}/>
+       <Route path="/programming/python" element={<Python/>}/>
+  
       
 
 

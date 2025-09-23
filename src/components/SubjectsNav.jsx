@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const subjectCategories = {
   Programming: [
-    { name: "Python", link: "/codingpy" },
+    { name: "Python", link: "/programming/python" },
     { name: "Java", link: "/programming/java" },
     { name: "C", link: "/programming/c" },
     { name: "C++", link: "/programming/cpp" },

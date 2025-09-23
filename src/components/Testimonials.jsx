@@ -146,9 +146,9 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-r from-rose-100 via-amber-100 to bg-yellow-200">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-12">
+    <section className="py-16 ">
+      <div className="max-w-7xl mx-auto px-6 rounded-xl shadow-xl ">
+        <div className="text-center ">
           <h3 className="text-3xl md:text-4xl font-bold mb-4">
             What Our <span className="text-amber-500">Clients Say</span>
           </h3>
@@ -158,7 +158,7 @@ const Testimonials = () => {
         </div>
 
         {/* Categories */}
-        <div className="flex justify-center mb-10 flex-wrap gap-4">
+        <div className="flex justify-center mb-8 flex-wrap gap-4 ">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -175,7 +175,7 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonial cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 ">
           {visibleCards.map((t, i) => (
             <div
               key={i}
