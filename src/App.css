@@ -1,14 +1,12 @@
-/* Extra small devices / phones (max-width: 320px) */
-@media (max-width: 320px) {
-  .app-container {
-    padding: 6px;
-    font-size: 11px;
-    background-color: #fafafa;
-  }
+/* Base styles (default: mobile first) */
+.app-container {
+  padding: 6px;
+  font-size: 11px;
+  background-color: #fafafa;
 }
 
 /* Small phones (321px - 374px) */
-@media (min-width: 321px) and (max-width: 374px) {
+@media (min-width: 321px) {
   .app-container {
     padding: 7px;
     font-size: 12px;
@@ -17,7 +15,7 @@
 }
 
 /* iPhone X / 12 / 13 / 14 (375px - 424px) */
-@media (min-width: 375px) and (max-width: 424px) {
+@media (min-width: 375px) {
   .app-container {
     padding: 8px;
     font-size: 13px;
@@ -26,7 +24,7 @@
 }
 
 /* Small devices / large phones (425px - 767px) */
-@media (min-width: 425px) and (max-width: 767px) {
+@media (min-width: 425px) {
   .app-container {
     padding: 12px;
     font-size: 14px;
@@ -35,7 +33,7 @@
 }
 
 /* Medium devices / tablets (768px - 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) {
   .app-container {
     padding: 16px;
     font-size: 15px;
@@ -43,17 +41,8 @@
   }
 }
 
-/* Specific rule for exact 768px tablet width */
-@media (width: 768px) {
-  .app-container {
-    padding: 16px; /* customize if needed */
-    font-size: 15px; /* customize if needed */
-    background-color: #eaeaea; /* customize if needed */
-  }
-}
-
 /* Large devices / laptops (1025px - 1440px) */
-@media (min-width: 1025px) and (max-width: 1440px) {
+@media (min-width: 1025px) {
   .app-container {
     padding: 20px;
     font-size: 18px;
@@ -62,7 +51,7 @@
 }
 
 /* Extra large devices / desktops (1441px - 1920px) */
-@media (min-width: 1441px) and (max-width: 1920px) {
+@media (min-width: 1441px) {
   .app-container {
     padding: 24px;
     font-size: 20px;
@@ -71,7 +60,7 @@
 }
 
 /* Ultra large devices / 4K screens (1921px - 2560px) */
-@media (min-width: 1921px) and (max-width: 2560px) {
+@media (min-width: 1921px) {
   .app-container {
     padding: 28px;
     font-size: 22px;
