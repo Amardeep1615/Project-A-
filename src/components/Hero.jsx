@@ -40,20 +40,20 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
             <Link
               to="FigmaPage"
-              className="bg-blue-700 hover:bg-amber-500 text-white px-8 py-3 rounded-full font-medium shadow-lg hover:shadow-xl transition-all"
+              className="bg-amber-500 hover:bg-white text-black  hover:text-amber hover:font-bold px-6 py-3 rounded-full  font-medium shadow-lg hover:shadow-xl transition-all"
             >
               Figma
             </Link>
             
             <Link
               to="ourstorypage"
-              className="bg-amber-500 hover:bg-blue-700 text-blue-900 hover:text-black px-6 py-4 rounded-full font-bold shadow-lg hover:shadow-xl transition-all"
+              className="bg-amber-500 hover:bg-white text-black  hover:text-amber hover:font-bold px-6 py-4 rounded-full  font-medium shadow-lg hover:shadow-xl transition-all"
             >
               Our Story
             </Link>
             <Link
               to="LearnMore"
-              className=" bg-green-500 text-blue-700 hover:bg-blue-50 px-6 py-4 rounded-full font-medium shadow-lg hover:shadow-xl transition-all"
+              className=" bg-amber-500 hover:bg-white text-black  hover:text-amber hover:font-bold px-6 py-4 rounded-full font-medium shadow-lg hover:shadow-xl transition-all"
             >
               Learn More
             </Link>

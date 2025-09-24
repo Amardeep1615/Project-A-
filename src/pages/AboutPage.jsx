@@ -16,7 +16,7 @@ const AboutPage = () => {
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              ANA <span className="text-sky-600">Innovative Works</span>
+              ANA <span className="text-amber-500">Innovative Works</span>
             </h2>
             <p className="text-lg mb-6 text-gray-600">
               We deliver modern digital solutions to empower businesses —
@@ -35,35 +35,35 @@ const AboutPage = () => {
       </div>
 
       {/* MISSION / SERVICES */}
-      <div className="py-16 bg-white">
+      <div className="py-16 bg-amber-500">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center">
           <div>
             <FontAwesomeIcon
               icon={faLaptopCode}
-              className="text-sky-600 text-3xl mb-3"
+              className="text-black text-3xl mb-3"
             />
             <h4 className="font-semibold text-lg">Software Development</h4>
-            <p className="text-gray-600 text-sm">
+            <p className="text-black text-sm">
               Building scalable, secure, and custom applications.
             </p>
           </div>
           <div>
             <FontAwesomeIcon
               icon={faLightbulb}
-              className="text-sky-600 text-3xl mb-3"
+              className="text-black text-3xl mb-3"
             />
             <h4 className="font-semibold text-lg">AI & Automation</h4>
-            <p className="text-gray-600 text-sm">
+            <p className="text-black text-sm">
               Leveraging AI to optimize workflows and insights.
             </p>
           </div>
           <div>
             <FontAwesomeIcon
               icon={faUsers}
-              className="text-sky-600 text-3xl mb-3"
+              className="text-black text-3xl mb-3"
             />
             <h4 className="font-semibold text-lg">Client Collaboration</h4>
-            <p className="text-gray-600 text-sm">
+            <p className="text-black text-sm">
               Dedicated support with long-term partnerships.
             </p>
           </div>
@@ -71,7 +71,7 @@ const AboutPage = () => {
       </div>
 
       {/* STATISTICS */}
-      <div className="py-12 bg-sky-50">
+      <div className="py-12 bg-black text-amber-500">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
             <FontAwesomeIcon
@@ -105,7 +105,7 @@ const AboutPage = () => {
       </div>
 
       {/* CALL TO ACTION */}
-      <div className="bg-sky-600 py-12 text-center text-white">
+      <div className="bg-amber-500 py-12 text-center text-black">
         <h3 className="text-3xl font-bold mb-4">
           Ready to Transform Your Business?
         </h3>
@@ -114,7 +114,7 @@ const AboutPage = () => {
         </p>
         <a
           href="/contact"
-          className="bg-white text-sky-600 px-6 py-3 rounded-full font-semibold hover:bg-opacity-90 transition"
+          className="bg-white hover:bg-black hover:text-amber-500 px-6 py-3 rounded-full font-semibold hover:bg-opacity-90 transition"
         >
           Contact Us
         </a>

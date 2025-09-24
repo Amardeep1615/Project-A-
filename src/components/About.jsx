@@ -9,7 +9,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0 md:pr-10">
-            <h3 className="text-3xl md:text-4xl font-bold mb-6">ANA <span className="text-primary-900">Innovative Works</span></h3>
+            <h3 className="text-3xl md:text-4xl font-bold text-black mb-6">ANA <span className="text-amber-500">Innovative Works</span></h3>
             <p className="text-lg mb-6">Leading Tech Pathway Solutions by TMK. We're redefining what's possible through technology and creativity.</p>
             <ul className="space-y-3">
               <li className="flex items-start">

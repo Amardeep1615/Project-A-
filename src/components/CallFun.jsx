@@ -22,7 +22,7 @@ const CallFun = () => {
           {/* Get Started Button */}
           <Link
             to="/GetStarted"
-            className="bg-amber-500 hover:bg-purple-700 text-white font-bold px-8 py-4 rounded-full shadow-xl transform hover:scale-105 transition-all duration-300"
+            className="bg-amber-500 hover:bg-black text-black  hover:text-white font-medium hover:font-bold px-8 py-4 rounded-full shadow-xl transform hover:scale-105 transition-all duration-300"
           >
             Get Started Now
           </Link>
@@ -30,7 +30,7 @@ const CallFun = () => {
           {/* Schedule Demo Button */}
           <button
             onClick={() => setShowModal(true)}
-            className="bg-purple-900 hover:bg-pink-900 text-white font-bold px-8 py-4 rounded-full shadow-xl transform hover:scale-105 transition-all duration-300"
+            className="bg-amber-500 hover:bg-black text-black  hover:text-white font-medium hover:font-bold px-8 py-4 rounded-full shadow-xl transform hover:scale-105 transition-all duration-300"
           >
             Schedule a Demo
           </button>

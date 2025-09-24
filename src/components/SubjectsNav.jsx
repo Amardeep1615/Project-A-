@@ -148,7 +148,8 @@ const StudyNavbar = () => {
               <button
                 ref={(el) => (buttonRefs.current[category] = el)}
                 onClick={() => toggleCategory(category)}
-                className="px-4 py-2 bg-white rounded-lg shadow hover:bg-gray-100 whitespace-nowrap"
+              className="px-4 py-2 bg-white text-black rounded-lg shadow  whitespace-nowrap transition duration-300 hover:bg-amber-500 hover:text-black hover:font-bold"
+
               >
                 {category}
               </button>
@@ -170,7 +171,7 @@ const StudyNavbar = () => {
             <div
               key={subject.name}
               onClick={() => navigate(subject.link)}
-              className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+              className="px-4 py-2 hover:bg-amber-500 hover:text-black hover:font-bold cursor-pointer"
             >
               {subject.name}
             </div>

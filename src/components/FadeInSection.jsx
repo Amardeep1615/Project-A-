@@ -17,6 +17,7 @@ const FadeInSection = ({
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setTimeout(() => setIsVisible(true), delay);
+            
             if (once) observer.unobserve(domRef.current);
           } else if (!once) {
             setIsVisible(false);

@@ -105,13 +105,13 @@ const Header = () => {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-8 items-center ml-6">
-            <Link to="/" className="hover:text-amber-500 transition-colors font-medium">Home</Link>
-            <Link to="/about" className="hover:text-amber-500 transition-colors font-medium">About</Link>
-            <Link to="/services" className="hover:text-amber-500 transition-colors font-medium">Services</Link>
-            <Link to="/contact" className="hover:text-amber-500 transition-colors font-medium">Contact</Link>
-            <Link
+            <Link to="/" className="hover:text-amber-500 transition-colors font-medium hover:font-bold">Home</Link>
+            <Link to="/about" className="hover:text-amber-500 transition-colors font-medium hover:font-bold">About</Link>
+            <Link to="/services" className="hover:text-amber-500 transition-colors font-medium hover:font-bold">Services</Link>
+            <Link to="/contact" className="hover:text-amber-500 transition-colors font-medium hover:font-bold">Contact</Link>
+            <Link 
               to="/GetStarted"
-              className="ml-4 bg-amber-500 text-blue-900 px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl"
+              className="ml-4 bg-amber-500 text-black hover:bg-white hover:text-black hover:font-bold px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl"
             >
               Get Started
             </Link>

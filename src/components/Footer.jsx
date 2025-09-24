@@ -40,10 +40,10 @@ const Footer = () => {
           <div>
             <h5 className="text-base font-semibold mb-2">Company</h5>
             <ul className="space-y-2 text-gray-300 text-sm">
-              <li><Link to="/about" className="hover:text-amber-400 transition">About Us</Link></li>
-              <li><Link to="/career" className="hover:text-amber-400 transition">Careers</Link></li>
-              <li><Link to="/blog" className="hover:text-amber-400 transition">Blog</Link></li>
-              <li><Link to="/press" className="hover:text-amber-400 transition">Press</Link></li>
+              <li><Link to="/about" className="hover:text-amber-400 transition hover:font-medium">About Us</Link></li>
+              <li><Link to="/career" className="hover:text-amber-400 transition hover:font-medium">Careers</Link></li>
+              <li><Link to="/blog" className="hover:text-amber-400 transition hover:font-medium">Blog</Link></li>
+              <li><Link to="/press" className="hover:text-amber-400 transition hover:font-medium">Press</Link></li>
             </ul>
           </div>
 
@@ -51,23 +51,31 @@ const Footer = () => {
           <div>
             <h5 className="text-base font-semibold mb-2">Resources</h5>
             <ul className="space-y-2 text-gray-300 text-sm">
-              <li><Link to="/docs" className="hover:text-amber-400 transition">Documentation</Link></li>
-              <li><Link to="/guides" className="hover:text-amber-400 transition">Guides</Link></li>
-              <li><Link to="/status" className="hover:text-amber-400 transition">API Status</Link></li>
-              <li><Link to="/help" className="hover:text-amber-400 transition">Help Center</Link></li>
+              <li><Link to="/docs" className="hover:text-amber-400 transition hover:font-medium" >Documentation</Link></li>
+              <li><Link to="/guides" className="hover:text-amber-400 transition hover:font-medium">Guides</Link></li>
+              <li><Link to="/status" className="hover:text-amber-400 transition hover:font-medium">API Status</Link></li>
+              <li><Link to="/help" className="hover:text-amber-400 transition hover:font-medium">Help Center</Link></li>
             </ul>
           </div>
-
-          {/* Contact */}
-          <div>
-            <h5 className="text-base font-semibold mb-2">Contact</h5>
-            <ul className="space-y-2 text-gray-300 text-sm">
-              <li className="flex items-start"><FontAwesomeIcon icon={faMapMarkerAlt} className="mt-1 mr-3 text-amber-400" />123 Innovation Drive, Tech City</li>
-              <li className="flex items-start"><FontAwesomeIcon icon={faPhoneAlt} className="mt-1 mr-3 text-amber-400" />+1 (800) 123-4567</li>
-              <li className="flex items-start"><FontAwesomeIcon icon={faEnvelope} className="mt-1 mr-3 text-amber-400" />support@projecta.com</li>
-            </ul>
-          </div>
-        </div>
+{/* Contact */}
+<div>
+  <h5 className="text-base font-semibold mb-2">Contact</h5>
+  <ul className="space-y-2 text-gray-300 text-sm">
+    <li className="flex items-start">
+      <FontAwesomeIcon icon={faMapMarkerAlt} className="mt-1 mr-3 text-amber-400 hover:font-medium" />
+      <Link to="/location" className="hover:text-amber-500 transition">K.P.H.B Hyderabad</Link>
+    </li>
+    <li className="flex items-start">
+      <FontAwesomeIcon icon={faPhoneAlt} className="mt-1 mr-3 text-amber-400 hover:font-medium" />
+      <a href="mobile" className="hover:text-amber-500 transition">81790401516</a>
+    </li>
+    <li className="flex items-start">
+      <FontAwesomeIcon icon={faEnvelope} className="mt-1 mr-3 text-amber-400 hover:font-medium" />
+      <a href="mail" className="hover:text-amber-500 transition">Tmk_Presents.ProjectA@gmail.com</a>
+    </li>
+  </ul>
+  </div>
+</div>
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 pt-4 flex flex-col md:flex-row justify-between items-center text-xs">
@@ -75,9 +83,9 @@ const Footer = () => {
             © {new Date().getFullYear()} Project A Solutions. All rights reserved.
           </p>
           <div className="flex space-x-4">
-            <Link to="/privacy" className="text-gray-400 hover:text-amber-400 transition">Privacy Policy</Link>
-            <Link to="/terms" className="text-gray-400 hover:text-amber-400 transition">Terms of Service</Link>
-            <Link to="/cookies" className="text-gray-400 hover:text-amber-400 transition">Cookies</Link>
+            <Link to="/privacy" className="text-gray-400 hover:text-amber-400 transition hover:font-medium">Privacy Policy</Link>
+            <Link to="/terms" className="text-gray-400 hover:text-amber-400 transition hover:font-medium">Terms of Service</Link>
+            <Link to="/cookies" className="text-gray-400 hover:text-amber-400 transition hover:font-medium">Cookies</Link>
           </div>
         </div>
       </div>
