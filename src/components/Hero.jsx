@@ -1,11 +1,22 @@
 // src/components/Hero.jsx
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
+  // Store images in an array
+  const images = ["/com.jpg", "/sci1.jpg", "/math1.jpg", "/math2.jpg", "/phy2.jpg","/chem2.jpg","/eng2.jpg"];
+  const [currentImage, setCurrentImage] = useState(0);
+
+  // Auto slide every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
-    // Removed min-h-screen
-    <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-blue-700 to-purple-700"> 
+    <section className="relative overflow-hidden bg-black"> 
       {/* Background Images */}
       <img
         src="cod2.jpg"
@@ -21,7 +32,6 @@ const Hero = () => {
       ></div>
 
       {/* Main Container */}
-      {/* Reduced py-24 md:py-32 to py-12 md:py-16 */}
       <div className="max-w-7xl mx-auto px-6 py-12 md:py-16 flex flex-col md:flex-row items-center relative z-10">
         
         {/* Left Text */}
@@ -44,7 +54,6 @@ const Hero = () => {
             >
               Figma
             </Link>
-            
             <Link
               to="ourstorypage"
               className="bg-amber-500 hover:bg-white text-black  hover:text-amber hover:font-bold px-6 py-4 rounded-full  font-medium shadow-lg hover:shadow-xl transition-all"
@@ -60,7 +69,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Right Image */}
+        {/* Right Slideshow */}
         <div className="md:w-1/2 flex justify-center">
           <div className="relative w-full max-w-md">
             <div className="relative bg-white p-1 rounded-2xl shadow-2xl overflow-hidden">
@@ -70,15 +79,17 @@ const Hero = () => {
                 <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                 <div className="w-3 h-3 rounded-full bg-green-500"></div>
               </div>
-              {/* Main Image */}
+              {/* Slideshow Image */}
               <img
-                src="/com.jpg"
+                src={images[currentImage]}
                 alt="Innovation"
-                className=" rounded-b-lg"
+                className="w-full h-full md:h-96  object-cover rounded-b-lg transition-opacity duration-1000 ease-in-out"
+                key={currentImage} // Force re-render for fade
               />
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );
