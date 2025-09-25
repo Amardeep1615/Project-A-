@@ -71,7 +71,7 @@ const Footer = () => {
     </li>
     <li className="flex items-start">
       <FontAwesomeIcon icon={faEnvelope} className="mt-1 mr-3 text-amber-400 hover:font-medium" />
-      <a href="mail" className="hover:text-amber-500 transition">Tmk_Presents.ProjectA@gmail.com</a>
+      <a href="mail" className="hover:text-amber-500 transition">tmk.ProjectA@gmail.com</a>
     </li>
   </ul>
   </div>
