@@ -6,6 +6,8 @@ import {
   faLightbulb,
   faUsers,
   faChartLine,
+  faStar,
+
 } from "@fortawesome/free-solid-svg-icons";
 
 const AboutPage = () => {
@@ -76,30 +78,34 @@ const AboutPage = () => {
           <div>
             <FontAwesomeIcon
               icon={faChartLine}
-              className="text-sky-600 text-2xl mb-2"
+              className="text-white text-2xl mb-2"
             />
             <h4 className="text-2xl font-bold">250+</h4>
-            <p className="text-gray-600 text-sm">Projects</p>
+            <p className="text-white text-sm">Projects</p>
           </div>
           <div>
             <FontAwesomeIcon
               icon={faUsers}
-              className="text-sky-600 text-2xl mb-2"
+              className="text-white text-2xl mb-2"
             />
             <h4 className="text-2xl font-bold">120+</h4>
-            <p className="text-gray-600 text-sm">Clients</p>
+            <p className="text-white text-sm">Clients</p>
           </div>
           <div>
             <FontAwesomeIcon
               icon={faLaptopCode}
-              className="text-sky-600 text-2xl mb-2"
+              className="text-white text-2xl mb-2"
             />
             <h4 className="text-2xl font-bold">50+</h4>
-            <p className="text-gray-600 text-sm">Experts</p>
+            <p className="text-white text-sm">Experts</p>
           </div>
           <div>
+             <FontAwesomeIcon
+              icon={faStar}
+              className="text-white text-2xl mb-2"
+            />
             <h4 className="text-2xl font-bold">4.9/5</h4>
-            <p className="text-gray-600 text-sm">Ratings</p>
+            <p className="text-white text-sm">Ratings</p>
           </div>
         </div>
       </div>
